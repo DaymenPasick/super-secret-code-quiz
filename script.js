@@ -43,4 +43,17 @@
 // need a button that, upon clicking, will submit both these variables into local storage
 // need a way to take these locally stored values and put them into an Ordered List for leaderboards
 // need to way to sort this list, from highest to greatest
-// need a way to populate these into the highscore/detail tab in the top left of the nav bar
+// need a way to populate these into the highscore/detail tab in the top left of the nav bar   
+
+
+
+// will take a value into variable leaderBoardReturn, and pass it into hiscores *********
+// possible functionality to create text/data/variable based on user input. May
+// be able to use it to populate hiscore back into an ordered list?
+
+// var leaderBoardReturn = locallyStoredScoresReturned;
+// document.body.children[0].children[0].append(leaderBoardReturn)
+
+// var leaderBoardReturn = "sucess!";
+// document.body.children[0].children[0].append(leaderBoardReturn);
+// console.log(document.body.children[0].children[0]);
