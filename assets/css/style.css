@@ -49,9 +49,18 @@
  /*  Start Page -------------------------------------------------- */
 
 
-
+ main {
+    /* container for Quiz Page/End Page and Hiscore*/
+ }
 
  /*  Quiz Page -------------------------------------------------- */
+ section {
+    /* container for Quiz Page sections */
+ }
+
+ section h2 {
+    /* style for h2 questions*/
+ }
 
  /*  Quiz Page -------------------------------------------------- */
 
