@@ -66,6 +66,7 @@
     border: solid 10px var(--border-color);
     border-top-right-radius: 5%;
     border-bottom-right-radius: 5%;
+    display: none;
 
  }
 
@@ -98,9 +99,8 @@
  main {
     display: flex;
     color: var(--general-font-color) ;
-    /* background-color: rgb(168, 105, 28); */
     width: 50%;
-    /* display: none; */
+
 
 
  }
@@ -179,7 +179,7 @@
     border: solid 10px var(--border-color);
     border-top-right-radius: 5%;
     border-bottom-right-radius: 5%;
-    display: none;
+
     
  }
 
@@ -197,13 +197,19 @@
     padding-bottom: 2%;
  }
 
+ form #submit-score {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 2%;
+ }
+
  summary form {
     /* box-sizing: border-box; */
     display: flex;
     padding: 0;
     margin-right: 1%;
     margin-top: 2%;
-    justify-content: space-around; 
+    justify-content: center; 
     font-size: var(--p-text-size);
 }
 
