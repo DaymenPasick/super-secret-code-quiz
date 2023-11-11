@@ -11,7 +11,7 @@
     --border-color:rgb(9, 74, 9);
     --p-text-size: 25px;
     --h2-text-size: 70px;
-    --general-font-color: white;
+    --general-font-color: rgb(246, 236, 236);
     --answer-choice-size: 55px;
 }
 
@@ -33,17 +33,22 @@
     right: 0;
     top: 0;
     width: 100%;
-    /* align-self:flex-start; */
-    color: var(--general-font-color);
-    background-color: blue;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: Black;
+    font-weight: bold;
+    background-color: rgb(231, 194, 101);
+    border-bottom: solid 10px var(--border-color);
  }
 
  nav details {
-    margin-left: .5%;
+    margin-left: 1%;
+    font-size: 35px;
  }
 
  nav time {
-    margin-right: .5%;
+    margin-right: 1%;
+    font-size: 35px;
  }
  /* Nav Bar -------------------------------------------------- */
 
