@@ -90,7 +90,8 @@
     margin-top: -25%;
     padding: 5% 5% 5% 5%;
     border: solid 10px var(--border-color);
-    /* background-color: aquamarine; */
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
  }
 
  section h2 {
