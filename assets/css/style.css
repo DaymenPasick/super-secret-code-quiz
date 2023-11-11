@@ -81,8 +81,22 @@
 
 
 
- /*  HiScore Page -------------------------------------------------- */
+ /* HiScore Page -------------------------------------------------- */
+  aside {
+    /* container for aside section */
+  }
 
+  h4 {
+    /* hiscores page title */
+  }
+
+  aside p {
+    /* hiscore dropdown */
+  }
+
+  aside button {
+    /* button section */
+  }
 /*  HiScore Page -------------------------------------------------- */
 
 
