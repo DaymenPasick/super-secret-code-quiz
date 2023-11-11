@@ -5,7 +5,7 @@
 }
 
 :root {
-     background: rgb(31, 99, 83);
+     /* background: rgb(31, 99, 83); */
     --button-color: rgb(36, 36, 190);
     --button-text: white;
     --p-text-size: 25px;
@@ -15,14 +15,16 @@
 
  body {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    height: 100vh;
  }
 
 /* Nav Bar -------------------------------------------------- */
  nav {
-    display: flex;
-    justify-content: space-between;
-    color: var(--general-font-color) ;
+    color: var(--general-font-color);
+    background-color: blue;
  }
 
  nav details {
@@ -40,8 +42,9 @@
 /*  Start Page -------------------------------------------------- */
  header {
     display: flex;
-    justify-content: center;
     color: var(--general-font-color) ;
+    background-color: blueviolet;
+    
  }
 
  header h1 {
@@ -60,14 +63,15 @@
 
  main {
     color: var(--general-font-color) ;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+    background-color: rgb(168, 105, 28);
+    display: none;
+
+    /* display: none; */
  }
 
  /*  Quiz Page -------------------------------------------------- */
  section {
-    /* container for Quiz Page sections */
+    background-color: aquamarine;
  }
 
  section h2 {
@@ -98,7 +102,7 @@
 
  /*  Quiz End Page -------------------------------------------------- */
  summary {
-    /* container for summary section */
+    background-color: rgb(134, 34, 102);
  }
 
  h3 {
@@ -120,7 +124,7 @@
 
  /* HiScore Page -------------------------------------------------- */
   aside {
-    /* container for aside section */
+    background-color: black;
   }
 
   h4 {
