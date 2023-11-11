@@ -5,7 +5,7 @@
 }
 
 :root {
-     /* background: rgb(31, 99, 83); */
+      background: rgb(31, 99, 83);
     --button-color: rgb(36, 36, 190);
     --button-text: white;
     --p-text-size: 25px;
@@ -19,29 +19,29 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
+    /* background-color: aqua; */
     height: 100vh;
  }
 
 /* Nav Bar -------------------------------------------------- */
  nav {
-    right: 0;
-    top: 0;
     position: absolute;
-    width: 100%;
     display: flex;
     justify-content: space-between;
+    right: 0;
+    top: 0;
+    width: 100%;
     /* align-self:flex-start; */
     color: var(--general-font-color);
     background-color: blue;
  }
 
  nav details {
-    /* for hiscore dropdown */
+    margin-left: .5%;
  }
 
  nav time {
-    /* for time remaining portion */
+    margin-right: .5%;
  }
  /* Nav Bar -------------------------------------------------- */
 
@@ -53,7 +53,7 @@
     display: flex;
     color: var(--general-font-color) ;
     background-color: blueviolet;
-    
+    display: none;
  }
 
  header h1 {
@@ -71,15 +71,20 @@
 
 
  main {
+    display: flex;
     color: var(--general-font-color) ;
     background-color: rgb(168, 105, 28);
-    display: none;
+    width: 50%;
+    /* display: none; */
 
 
  }
 
  /*  Quiz Page -------------------------------------------------- */
  section {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
     background-color: aquamarine;
  }
 
@@ -92,15 +97,15 @@
  }
 
  #question2 {
-    /* container for q2 section */
+    display: none;
  } 
 
  #question3 {
-    /* container for q3 section */
+    display: none;
  } 
 
  #question4 {
-    /* container for q4 section */
+    display: none;
  }
 
  /*  Quiz Page -------------------------------------------------- */
@@ -112,6 +117,7 @@
  /*  Quiz End Page -------------------------------------------------- */
  summary {
     background-color: rgb(134, 34, 102);
+    display: none;
  }
 
  h3 {
@@ -134,6 +140,7 @@
  /* HiScore Page -------------------------------------------------- */
   aside {
     background-color: black;
+    display: none;
   }
 
   h4 {
