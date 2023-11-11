@@ -18,11 +18,11 @@
     /* container for nav section */
  }
 
- nav aside {
+ nav details {
     /* for hiscore dropdown */
  }
 
- nav p {
+ nav time {
     /* for time remaining portion */
  }
  /* Nav Bar -------------------------------------------------- */
@@ -75,9 +75,6 @@
  summary button {
     /* submit score button */
  }
-
-
-
 
 /*  Quiz End Page -------------------------------------------------- */
 
