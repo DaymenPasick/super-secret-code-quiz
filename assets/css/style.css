@@ -59,21 +59,38 @@
 /*  Start Page -------------------------------------------------- */
  header {
     display: flex;
-    color: var(--general-font-color) ;
-    background-color: blueviolet;
-    display: none;
+    flex-direction: column;
+    margin-top: -5%;
+    padding: 5% 5% 5% 5%;
+    background-color: var(--background-comp);
+    border: solid 10px var(--border-color);
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+
  }
 
  header h1 {
-    /* start tittle settings*/
+    display: flex;
+    color:var(--general-font-color);
+    font-size: calc(var(--h2-text-size) + 25px);
+
  }
 
  header p {
-    /* start page descrip settings*/
+    display: flex;
+    justify-content: center;
+    font-size: var(--p-text-size);
+    margin: 3% 0;
  }
 
- header button {
-    /* start page button settings */
+ header div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+ }
+
+ header div button {
+    padding: 1% 5%;
  }
  /*  Start Page -------------------------------------------------- */
 
@@ -206,6 +223,7 @@
     border: solid 10px var(--border-color);
     border-top-right-radius: 5%;
     border-bottom-right-radius: 5%;
+    display: none;
     
   }
 
