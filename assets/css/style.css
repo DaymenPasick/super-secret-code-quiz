@@ -15,7 +15,9 @@
 
 /* Nav Bar -------------------------------------------------- */
  nav {
-    /* container for nav section */
+    display: flex;
+    justify-content: space-between;
+    color: var(--general-font-color) ;
  }
 
  nav details {
@@ -32,7 +34,7 @@
 
 /*  Start Page -------------------------------------------------- */
  header {
-    /* container header section */
+    color: var(--general-font-color) ;
  }
 
  header h1 {
@@ -50,7 +52,7 @@
 
 
  main {
-    /* container for Quiz Page/End Page and Hiscore*/
+    color: var(--general-font-color) ;
  }
 
  /*  Quiz Page -------------------------------------------------- */
@@ -63,19 +65,19 @@
  }
 
  #question1 {
-
+    /* container for q1 section */
  }
 
  #question2 {
-
+    /* container for q2 section */
  } 
 
  #question3 {
-
+    /* container for q3 section */
  } 
 
  #question4 {
-
+    /* container for q4 section */
  }
 
  /*  Quiz Page -------------------------------------------------- */
