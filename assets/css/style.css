@@ -5,5 +5,10 @@
 }
 
 :root {
-    /* for global pseudo-classes */
+    background: rgb(31, 99, 83);
+    --button-color: rgb(36, 36, 190);
+    --button-text: white;
+    --p-text-size: 25px;
+    --h2-text-size: 50px;
+    --general-font-color: white;
 }
