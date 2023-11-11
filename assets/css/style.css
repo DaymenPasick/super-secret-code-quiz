@@ -133,13 +133,13 @@
  #question3 {
     display: flex;
     flex-direction: column;
-    
+    display: none;
  } 
 
  #question4 {
     display: flex;
     flex-direction: column;
-    display: none;
+    
  }
 
  /*  Quiz Page -------------------------------------------------- */
