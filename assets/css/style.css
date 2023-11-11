@@ -32,7 +32,7 @@
 
 /*  Start Page -------------------------------------------------- */
  header {
-    /* container for start page section */
+    /* container header section */
  }
 
  header h1 {
@@ -40,7 +40,7 @@
  }
 
  header p {
-    /* start tittle settings*/
+    /* start page descrip settings*/
  }
 
  header button {
@@ -60,6 +60,24 @@
 
 
  /*  Quiz End Page -------------------------------------------------- */
+ summary {
+    /* container for summary section */
+ }
+
+ h3 {
+    /* quiz end title */
+ }
+ 
+ summary p {
+    /* quiz final score */
+ }
+
+ summary button {
+    /* submit score button */
+ }
+
+
+
 
 /*  Quiz End Page -------------------------------------------------- */
 
@@ -68,7 +86,6 @@
 
  /*  HiScore Page -------------------------------------------------- */
 
-  /*  HiScore Page -------------------------------------------------- */
+/*  HiScore Page -------------------------------------------------- */
 
 
-  
