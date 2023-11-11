@@ -45,7 +45,7 @@
 // need to way to sort this list, from highest to greatest
 // need a way to populate these into the highscore/detail tab in the top left of the nav bar   
 
-
+// ++++++++++++Theoretical Solve Playground++++++++++++++
 
 // will take a value into variable leaderBoardReturn, and pass it into hiscores *********
 // possible functionality to create text/data/variable based on user input. May
@@ -57,3 +57,8 @@
 // var leaderBoardReturn = "sucess!";
 // document.body.children[0].children[0].append(leaderBoardReturn);
 // console.log(document.body.children[0].children[0]);
+// this syntax could also accomplish this for an ordered list
+// var orderedList = document.createEelement("ol")
+// var li1 = document.createElement("li")
+// orderedList.appendChild(li1)
+//l1.textContent = "leaderBoardStatsFromLocalStorage"
