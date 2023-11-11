@@ -8,8 +8,8 @@
       background: rgb(31, 99, 83);
     --button-color: rgb(36, 36, 190);
     --button-text: white;
-    --border-color:rgb(9, 74, 9);
-    --background-comp: rgb(237, 220, 177);
+    --border-color:rgb(0, 60, 0);
+    --background-comp: rgb(240, 226, 191);
     --p-text-size: 25px;
     --h2-text-size: 70px;
     --general-font-color: rgb(0, 0, 0);
@@ -121,6 +121,7 @@
  #question2 {
     display: flex;
     flex-direction: column;
+    display: none;
     
  } 
 
@@ -132,7 +133,7 @@
  #question3 {
     display: flex;
     flex-direction: column;
-    display: none;
+    
  } 
 
  #question4 {
