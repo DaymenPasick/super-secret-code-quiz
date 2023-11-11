@@ -9,8 +9,9 @@
     --button-color: rgb(36, 36, 190);
     --button-text: white;
     --p-text-size: 25px;
-    --h2-text-size: 50px;
+    --h2-text-size: 70px;
     --general-font-color: white;
+    --answer-choice-size: 55px;
 }
 
  body {
@@ -73,7 +74,7 @@
  main {
     display: flex;
     color: var(--general-font-color) ;
-    background-color: rgb(168, 105, 28);
+    /* background-color: rgb(168, 105, 28); */
     width: 50%;
     /* display: none; */
 
@@ -85,11 +86,16 @@
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
  }
 
  section h2 {
-    /* style for h2 questions*/
+    font-size: var(--h2-text-size);
+ }
+
+ .answer-choices {
+    font-size: var(--answer-choice-size);
+    list-style-type: upper-alpha;
  }
 
  #question1 {
