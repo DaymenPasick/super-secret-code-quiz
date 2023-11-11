@@ -1,14 +1,39 @@
 /* Style Sheet */
 
 * {
-    /* For global variables */
+    /* For global styling */
 }
 
 :root {
-    background: rgb(31, 99, 83);
+     background: rgb(31, 99, 83);
     --button-color: rgb(36, 36, 190);
     --button-text: white;
     --p-text-size: 25px;
     --h2-text-size: 50px;
     --general-font-color: white;
 }
+
+ nav {
+    /* container for nav section */
+ }
+
+ nav aside {
+    /* for hiscore dropdown */
+ }
+
+ nav p {
+    /* for time remaining portion */
+ }
+
+
+ header {
+    /* container for start page section */
+ }
+
+ header h1 {
+    /* start tittle settings*/
+ }
+
+ header p {
+    /* start tittle settings*/
+ }
