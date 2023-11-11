@@ -162,6 +162,7 @@
     border: solid 10px var(--border-color);
     border-top-right-radius: 5%;
     border-bottom-right-radius: 5%;
+    display: none;
     
  }
 
@@ -196,20 +197,39 @@
 
  /* HiScore Page -------------------------------------------------- */
   aside {
-    background-color: black;
-    display: none;
+    display: flex;
+    flex-direction: column;;
+    width: 100%;
+    margin-top: -5%;
+    padding: 5% 5% 5% 5%;
+    background-color: var(--background-comp);
+    border: solid 10px var(--border-color);
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+    
   }
 
   h4 {
-    /* hiscores page title */
+    display: flex;
+    justify-content: center;
+    font-size: var(--h2-text-size);
+
   }
 
   aside p {
-    /* hiscore dropdown */
+    display: flex;
+    justify-content: center;
+    margin:3% 0;
+  }
+
+  aside div{
+    display: flex; 
+    justify-content: center;
   }
 
   aside button {
-    /* button section */
+    margin: 0 3%;
+    padding: 0 2%;
   }
 /*  HiScore Page -------------------------------------------------- */
 
