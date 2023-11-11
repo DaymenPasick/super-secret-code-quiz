@@ -8,6 +8,7 @@
       background: rgb(31, 99, 83);
     --button-color: rgb(36, 36, 190);
     --button-text: white;
+    --border-color:rgb(9, 74, 9);
     --p-text-size: 25px;
     --h2-text-size: 70px;
     --general-font-color: white;
@@ -86,20 +87,27 @@
     display: flex;
     justify-content: flex-start;
     width: 100%;
+    margin-top: -25%;
+    padding: 5% 5% 5% 5%;
+    border: solid 10px var(--border-color);
     /* background-color: aquamarine; */
  }
 
  section h2 {
+    padding-left: 6%;
     font-size: var(--h2-text-size);
  }
 
  .answer-choices {
     font-size: var(--answer-choice-size);
     list-style-type: upper-alpha;
+    margin-top: 5%;
+    margin-left: 5%;
  }
 
  #question1 {
-    /* container for q1 section */
+    display: flex;
+    flex-direction: column;
  }
 
  #question2 {
