@@ -98,6 +98,7 @@
     border: solid 10px var(--border-color);
     border-top-right-radius: 5%;
     border-bottom-right-radius: 5%;
+    display: none;
  }
 
  section h2 {
@@ -139,6 +140,7 @@
  #question4 {
     display: flex;
     flex-direction: column;
+    display: none;
     
  }
 
@@ -150,8 +152,17 @@
 
  /*  Quiz End Page -------------------------------------------------- */
  summary {
-    background-color: rgb(134, 34, 102);
-    display: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    margin-top: -5%;
+    padding: 5% 5% 5% 5%;
+    background-color: var(--background-comp);
+    border: solid 10px var(--border-color);
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+    
  }
 
  h3 {
