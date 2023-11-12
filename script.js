@@ -98,38 +98,42 @@ function userAnswer(event) {
     event.preventDefault();
     var answer = event.target.textContent;
     console.log(answer);
-    displayQTwo();
+    displayQTwo();//will pass user to second question
 }
 
 // question answer 2
 var q2Event = document.querySelector("#choice-two");
-q2Event.addEventListener("click", userAnswer);
+q2Event.addEventListener("click", userAnswer2);
 
-function userAnswer(event) {
+function userAnswer2(event) {
     event.preventDefault();
     var answer = event.target.textContent;
     console.log(answer);
+    displayQThree();//will pass user to third question
 }
 
 // question answer 3
 var q3Event = document.querySelector("#choice-three");
-q3Event.addEventListener("click", userAnswer);
+q3Event.addEventListener("click", userAnswer3);
 
-function userAnswer(event) {
+function userAnswer3(event) {
     event.preventDefault();
     var answer = event.target.textContent;
     console.log(answer);
+    displayQFour();//will pass user to fourth question
 }
 
 
 // question answer 4
 var q4Event = document.querySelector("#choice-four");
-q4Event.addEventListener("click", userAnswer);
+q4Event.addEventListener("click", userAnswer4);
 
-function userAnswer(event) {
+function userAnswer4(event) {
     event.preventDefault();
     var answer = event.target.textContent;
     console.log(answer);
+    displayQuizEnd() //will pass user to end quiz page
+    
 }
 
 
