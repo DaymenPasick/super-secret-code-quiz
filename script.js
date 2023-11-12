@@ -5,25 +5,43 @@ var submitInitialsButton = document.querySelector("#submit-initials");
 var userInitials = document.querySelector("#user-initials");
 var storedInitials ="";
 var userScore = 7; //will eventually take in user quiz result
+var startPage = document.querySelector(".startPage");
+var quizPage = document.querySelector(".quizPage");
+var endPage = document.querySelector(".endPage");
+var scorePage = document.querySelector(".scorePage");
 
 
 
 function displayStart(){
-
+    startPage.style.display = null;
+    quizPage.style.display = "none";
+    endPage.style.display = "none";
+    scorePage.style.display = "none";
 }
 
 function displayQuiz(){
-    
+    startPage.style.display = "none";
+    quizPage.style.display = null;
+    endPage.style.display = "none";
+    scorePage.style.display = "none"; 
 }
 
 function displayQuizEnd(){
-    
+    startPage.style.display = "none";
+    quizPage.style.display = "none";
+    endPage.style.display = null;
+    scorePage.style.display = "none";
 }
 
 
 function displayScorePage(){
-    
+    startPage.style.display = "none";
+    quizPage.style.display = "none";
+    endPage.style.display = "none";
+    scorePage.style.display = null;
 }
+
+displayStart();
 
 
 
