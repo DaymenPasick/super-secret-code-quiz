@@ -6,11 +6,13 @@ var userInitials = document.querySelector("#user-initials");
 var storedInitials ="";
 var userScore = 7; //will eventually take in user quiz result
 
+//for start,quiz,end, and score pages
 var startPage = document.querySelector(".startPage");
 var quizPage = document.querySelector(".quizPage");
 var endPage = document.querySelector(".endPage");
 var scorePage = document.querySelector(".scorePage");
 
+//for individual question phases
 var questionOne = document.querySelector("#question-one");
 var questionTwo = document.querySelector("#question-two");
 var questionThree = document.querySelector("#question-three");
@@ -36,8 +38,8 @@ function displayQuiz(){
     quizPage.style.display = null;
     endPage.style.display = "none";
     scorePage.style.display = "none";
-    cdTimer();
-    displayQOne()
+    cdTimer(); //will trigger timer to start
+    displayQOne()//will toggle question 1 page
 }
 
 function displayQuizEnd(){
@@ -57,7 +59,6 @@ function displayScorePage(){
 
 
 // functions to toggle through each quiz question
-
 function displayQOne() {
     questionOne.style.display = null;
     questionTwo.style.display = "none";
@@ -111,17 +112,8 @@ function sendQuizResult(){
     console.log(quizResult);
 }
 
-
-
-// Toggle system for the various "pages" of this quiz***************************************
-// 1) need variables set to each page "node". Start, each question/answer phase, quiz end, hiscores
-// 2) need a way to set one node to active so the user can see contents of active node
-// 3) need clear trigger response for navigating in/through each node
-// peractivity11-12Mod4, might need to set each "page" with an id to toggle to
-
 // Answering a question presents a new question ********************************************
-// 1) as noted above, need clear node locations(variables set from HTML id's maybe) for each question "page"
-// 2) need a local target functionality to will apply one click action when clicking on any of the answers 
+// 2) need a local target functionality that will apply one click action when clicking on any of the answers 
 // 3) while this action triggers a change to next question, it should also display the selected answers wrong/correct status
 // 4) need to set id/classes in html for answers for wrong/correct indentification
 // 5) need a way to delay the switch to the next question to user to see the wrong/correct alert
