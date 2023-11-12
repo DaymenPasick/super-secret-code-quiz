@@ -99,9 +99,6 @@
     display: flex;
     color: var(--general-font-color) ;
     width: 50%;
-
-
-
  }
 
  /*  Quiz Page -------------------------------------------------- */
@@ -129,13 +126,28 @@
     margin-left: 5%;
  }
 
- #question1 {
+ .answer-choices li{
+   font-size: var(--answer-choice-size);
+   list-style-type: upper-alpha;
+   margin-top: 5%;
+   margin-left: 5%;
+   text-decoration: none;
+}
+
+  .answer-choices li a{
+   text-decoration: none;
+   color: var(--p-text-size);
+   font-weight:530;
+  }
+
+
+ #question-one {
     display: flex;
     flex-direction: column;
 
  }
 
- #question2 {
+ #question-two {
     display: flex;
     flex-direction: column;
 
@@ -147,13 +159,13 @@
     font-style: oblique;
  }
 
- #question3 {
+ #question-three {
     display: flex;
     flex-direction: column;
 
  } 
 
- #question4 {
+ #question-four {
     display: flex;
     flex-direction: column;
 
