@@ -214,10 +214,7 @@ function calcFinalScore() {
     finalScore = userScore;
     finalScoreDisplay.textContent = "Final Score: " + finalScore;
 
-
 }
-
-// this will take in user initials from quiz end page and store it into storedInitials-----------------------------------
 
 
 //this will take both the userScore and storedInitials into an 
@@ -225,6 +222,7 @@ function calcFinalScore() {
 submitResultsButton.addEventListener("click", sendQuizResult);
 function sendQuizResult(event){
 
+    //will take in and user initials from end quiz page 
     event.preventDefault();
     storedInitials = userInitials.value
     console.log("User Initials: " + storedInitials);
