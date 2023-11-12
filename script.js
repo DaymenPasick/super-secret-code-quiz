@@ -12,16 +12,8 @@ var endPage = document.querySelector(".endPage");
 var scorePage = document.querySelector(".scorePage");
 
 var startButton = document.querySelector("#start-button");
+startButton.addEventListener("click", displayQuiz);
 
-
-
-
-
-
-//this will make startButton pass the user to Quiz Page section
-function startToQuiz() {
-    startButton.addEventListener("click", displayQuiz);
-}
 
 
 
@@ -168,4 +160,3 @@ function init() {
 }
 
 init();
-startToQuiz();
