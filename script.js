@@ -253,6 +253,7 @@ function createLeaderBoard() {
     console.log(quizResultReturn);
     console.log(returnedInitials);
     console.log(returnedScore);
+    }
 }
 
 
