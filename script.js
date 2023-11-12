@@ -1,31 +1,29 @@
 // JavaScript sheet
 
-// Spot for global variables
+// Household variables
 var submitInitialsButton = document.querySelector("#submit-initials");
 var userInitials = document.querySelector("#user-initials");
-var storedInitials ="";
 var userScore = 0;
+var storedInitials =""; //will be eddited based off end quiz page user input
 var finalScore = 0; //what will display in score screen at end quiz page
 
-//for start,quiz,end, and score pages
+//for start, quiz, quiz-end, and HiScore pages
 var startPage = document.querySelector(".startPage");
 var quizPage = document.querySelector(".quizPage");
 var endPage = document.querySelector(".endPage");
 var scorePage = document.querySelector(".scorePage");
 
-//used to toggle between individual question phases
+//used to toggle between individual question phases on quiz page
 var questionOne = document.querySelector("#question-one");
 var questionTwo = document.querySelector("#question-two");
 var questionThree = document.querySelector("#question-three");
 var questionFour = document.querySelector("#question-four");
 
-//will be used for each question phase of code and given a value accordingly
+//will be given a value in quiz page, when user answers the corrosponding question
 var question1AnswerStatus;
 var question2AnswerStatus;
 var question3AnswerStatus;
 var question4AnswerStatus;
-
-
 
 
 
@@ -220,14 +218,15 @@ function calcFinalScore() {
 }
 
 // this will take in user initials from quiz end page and store it into storedInitials-----------------------------------
+submitInitialsButton.addEventListener("click", storeUserInitials);
+
 function storeUserInitials(event) {
     event.preventDefault();
     storedInitials = userInitials.value
     console.log("User Initials: " + storedInitials);
-    sendQuizResult();
     // functionality needed to store into local memory
 }
-submitInitialsButton.addEventListener("click", storeUserInitials);
+
 
 //this will take both the userScore and storedInitials create a variable object (eventually as a key pair in local storage)
 function sendQuizResult(){
