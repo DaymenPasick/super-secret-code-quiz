@@ -112,20 +112,18 @@ q1Event.addEventListener("click", userAnswer);
 
 function userAnswer(event) {
     event.preventDefault();
-    var answer = event.target;
+    var answer = event.target; //for checking what click event is targetting
     console.log(answer);
 
     var answerResult = event.target.id;
 
     if (answerResult === q1CorrectAnswer.id) { //will change gloabl var question1AnswerStatus 
-        console.log("correct");
         question1AnswerStatus = "Correct";
+        console.log(question1AnswerStatus);
     } else{                                                 
         question1AnswerStatus = "Wrong";
-        console.log("wrong");
+        console.log(question1AnswerStatus);
     }
-
-
 
     displayQTwo();//will pass user to second question
 }
@@ -136,7 +134,7 @@ q2Event.addEventListener("click", userAnswer2);
 
 function userAnswer2(event) {
     event.preventDefault();
-    var answer = event.target.textContent;
+    var answer = event.target; //for checking what click event is targetting
     console.log(answer);
 
 
@@ -149,7 +147,7 @@ q3Event.addEventListener("click", userAnswer3);
 
 function userAnswer3(event) {
     event.preventDefault();
-    var answer = event.target.textContent;
+    var answer = event.target; //for checking what click event is targetting
     console.log(answer);
 
 
@@ -163,7 +161,7 @@ q4Event.addEventListener("click", userAnswer4);
 
 function userAnswer4(event) {
     event.preventDefault();
-    var answer = event.target.textContent;
+    var answer = event.target; //for checking what click event is targetting
     console.log(answer);
 
 
