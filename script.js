@@ -11,6 +11,11 @@ var quizPage = document.querySelector(".quizPage");
 var endPage = document.querySelector(".endPage");
 var scorePage = document.querySelector(".scorePage");
 
+var questionOne = document.querySelector("#question-one");
+var questionTwo = document.querySelector("#question-two");
+var questionThree = document.querySelector("#question-three");
+var questionFour = document.querySelector("#question-four");
+
 var startButton = document.querySelector("#start-button");
 startButton.addEventListener("click", displayQuiz);
 
@@ -50,10 +55,23 @@ function displayScorePage(){
 }
 
 
+// functions to toggle through each quiz question
 
+function displayQOne() {
+    questionOne.style.display = null;
+}
 
+function displayQTwo() {
 
+}
 
+function displayQThree() {
+
+}
+
+function displayQFour() {
+
+}
 
 
 
@@ -79,12 +97,6 @@ function sendQuizResult(){
     console.log(quizResult);
 }
 
-
-
-
-// Clicking start button = timer start and presentation of questions**********************
-// 3) need to assign start button to trigger initiation of timer
-// 4) need to assign start button to trigger switch to question part of the quiz
 
 
 // Toggle system for the various "pages" of this quiz***************************************
