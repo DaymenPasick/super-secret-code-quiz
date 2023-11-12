@@ -241,8 +241,9 @@ function sendQuizResult(event){
 }
 
 
-//function to take local storage HiScore and create a leaderboard
+//function to take local storage quizResult and create a leaderboard with the data
 var quizResultReturn = JSON.parse(localStorage.getItem("quizResult"));
+var leaderBoardReturn
 
 function createLeaderBoard() {
     // will verify quizResultReturn from local storage & pass object into function
@@ -254,6 +255,12 @@ function createLeaderBoard() {
     console.log(returnedInitials);
     console.log(returnedScore);
     }
+
+    document.querySelector("#leaderboard-user").textContent = "User: " + returnedInitials;
+    document.querySelector("#leaderboard-score").textContent = "User: " + returnedScore;
+    
+
+
 }
 
 
@@ -292,10 +299,5 @@ init();
 // need to way to sort this list, from highest to greatest
 // need a way to populate these into the highscore/detail tab in the top left of the nav bar   
 
-// ++++++++++++Theoretical Solve Playground++++++++++++++
-
-// will take a value into variable leaderBoardReturn, and pass it into hiscores *********
-// possible functionality to create text/data/variable based on user input. May
-// be able to use it to populate hiscore back into an ordered list?
 
 
