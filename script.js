@@ -237,11 +237,16 @@ function sendQuizResult(){
             score: finalScore,
         }
     ]
+    localStorage.setItem("quizResult", JSON.stringify(quizResult));
     console.log(quizResult);
 }
 
 
-// function and variables for countdown timer--- cdTimer will send user to end quiz page when timer runs out -----------------------------------
+
+
+
+
+// function and variables for countdown timer--- will send user to end quiz page when timer runs out -----------------------------------
 var quizTimer = document.querySelector(".time")
 var timeRemaining = 60;
 
