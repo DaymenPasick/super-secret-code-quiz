@@ -18,11 +18,15 @@ var questionTwo = document.querySelector("#question-two");
 var questionThree = document.querySelector("#question-three");
 var questionFour = document.querySelector("#question-four");
 
-var startButton = document.querySelector("#start-button");
-startButton.addEventListener("click", displayQuiz);
+
+
+
 
 
 // functions to toggle display of each "page"-- displayQuiz contains timer start & pass to question1 ---------------------------
+var startButton = document.querySelector("#start-button");
+startButton.addEventListener("click", displayQuiz);
+
 function displayStart(){
     startPage.style.display = null;
     quizPage.style.display = "none";
@@ -161,23 +165,19 @@ function sendQuizResult(){
     console.log(quizResult);
 }
 
-// Answering a question presents a new question ********************************************
-// 2) need a local target functionality that will apply one click action when clicking on any of the answers 
+// Need to way to display answer Corrent/Incorrect answers 
 // 3) while this action triggers a change to next question, it should also display the selected answers wrong/correct status
 // 4) need to set id/classes in html for answers for wrong/correct indentification
 // 5) need a way to delay the switch to the next question to user to see the wrong/correct alert
 // 6) need as way to display this wrong/correct alert upon clicking
 
+
 // Incorrect answers take time away from the clock (do this one at the end ^.^)**************
 // 1)as noted above, need ID's or classes to identify incorrect/correct answers
 // 2)need function that will descrease time when inccorect answer is choosen
 
-// Questions finished/Timer run-out = end of quiz********************************************
-// 1) final question page click event needs to also transfer user to end quiz "page"
-// 2) need a way to recognize the timer hitting 0, and set that event to a variable/if statement
-// 3) this timer-zero variable/if statement needs to also bring user to end quiz "page"
 
-// When game is over, user initials and score can be saved (Mod4Act8 might help)
+// When game is over, user initials and score can be saved (Mod4Act8 might help) *************
 // need a way to take these locally stored values and put them into an Ordered List for leaderboards
 // need to way to sort this list, from highest to greatest
 // need a way to populate these into the highscore/detail tab in the top left of the nav bar   
