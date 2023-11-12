@@ -1,7 +1,13 @@
 // JavaScript sheet
 
 // Spot for global variables
+subInitialsBut = document.getElementById("#sub-initials-button")
 
+
+
+
+
+// console.log(subInitialsBut);
 
 
 
@@ -17,6 +23,7 @@
 // 1) need variables set to each page "node". Start, each question/answer phase, quiz end, hiscores
 // 2) need a way to set one node to active so the user can see contents of active node
 // 3) need clear trigger response for navigating in/through each node
+// peractivity11-12Mod4, might need to set each "page" with an id to toggle to
 
 // Answering a question presents a new question ********************************************
 // 1) as noted above, need clear node locations(variables set from HTML id's maybe) for each question "page"
@@ -72,8 +79,8 @@ console.log(timeRemaining)
 function cdTimer() {
     var tInterval = setInterval(function(){
         timeRemaining--;
-        quizTimer.textContent = timeRemaining;
-
+        quizTimer.textContent = "Time Remaining: " + timeRemaining;
+        
         if(timeRemaining === 0) {
             clearInterval(tInterval);
             // function that will take user to end quiz page
