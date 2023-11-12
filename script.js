@@ -22,54 +22,6 @@ var startButton = document.querySelector("#start-button");
 startButton.addEventListener("click", displayQuiz);
 
 
-
-
-// functions to take in question answers from quiz pages
-
-// question answer 1
-var q1Event = document.querySelector("#choice-one");
-q1Event.addEventListener("click", userAnswer);
-
-function userAnswer(event) {
-    event.preventDefault();
-    var answer = event.target.textContent;
-    console.log(answer);
-}
-
-// question answer 2
-var q1Event = document.querySelector("#choice-one");
-q1Event.addEventListener("click", userAnswer);
-
-function userAnswer(event) {
-    event.preventDefault();
-    var answer = event.target.textContent;
-    console.log(answer);
-}
-
-// question answer 3
-var q1Event = document.querySelector("#choice-one");
-q1Event.addEventListener("click", userAnswer);
-
-function userAnswer(event) {
-    event.preventDefault();
-    var answer = event.target.textContent;
-    console.log(answer);
-}
-
-
-// question answer 4
-var q1Event = document.querySelector("#choice-one");
-q1Event.addEventListener("click", userAnswer);
-
-function userAnswer(event) {
-    event.preventDefault();
-    var answer = event.target.textContent;
-    console.log(answer);
-}
-
-
-
-
 // functions to toggle display of each "page"
 function displayStart(){
     startPage.style.display = null;
@@ -103,6 +55,7 @@ function displayScorePage(){
 }
 
 
+
 // functions to toggle through each quiz question
 function displayQOne() {
     questionOne.style.display = null;
@@ -132,6 +85,53 @@ function displayQFour() {
     questionThree.style.display = "none";
     questionFour.style.display = null;
 }
+
+
+
+// functions to take in question answers from quiz pages
+
+// question answer 1
+var q1Event = document.querySelector("#choice-one");
+q1Event.addEventListener("click", userAnswer);
+
+function userAnswer(event) {
+    event.preventDefault();
+    var answer = event.target.textContent;
+    console.log(answer);
+    displayQTwo();
+}
+
+// question answer 2
+var q2Event = document.querySelector("#choice-two");
+q2Event.addEventListener("click", userAnswer);
+
+function userAnswer(event) {
+    event.preventDefault();
+    var answer = event.target.textContent;
+    console.log(answer);
+}
+
+// question answer 3
+var q3Event = document.querySelector("#choice-three");
+q3Event.addEventListener("click", userAnswer);
+
+function userAnswer(event) {
+    event.preventDefault();
+    var answer = event.target.textContent;
+    console.log(answer);
+}
+
+
+// question answer 4
+var q4Event = document.querySelector("#choice-four");
+q4Event.addEventListener("click", userAnswer);
+
+function userAnswer(event) {
+    event.preventDefault();
+    var answer = event.target.textContent;
+    console.log(answer);
+}
+
 
 
 
