@@ -99,6 +99,7 @@ function displayQFour() {
 
 
 // functions to handle question answers from quiz pages--- answer 4 contains pass to end quiz page----------------------------
+//functions will add to user score or -10 seconds from timer based on user answer
 var q1CorrectAnswer = document.querySelector("#q1-correct")
 var q2CorrectAnswer = document.querySelector("#q2-correct")
 var q3CorrectAnswer = document.querySelector("#q3-correct")
@@ -118,6 +119,7 @@ function userAnswer(event) {
     if (answerResult === q1CorrectAnswer.id) { //will change gloabl var question1AnswerStatus 
         question1AnswerStatus = "Correct";
         console.log(question1AnswerStatus);
+        userScore = userScore + 15; // will add +15 to userScore
     } else{                                                 
         question1AnswerStatus = "Wrong";
         console.log(question1AnswerStatus);
@@ -125,6 +127,7 @@ function userAnswer(event) {
 
     }
 
+    console.log("Current Score: " + userScore);
     displayQTwo();//will pass user to second question
 }
 
@@ -142,12 +145,14 @@ function userAnswer2(event) {
     if (answerResult === q2CorrectAnswer.id) { //will change gloabl var question2AnswerStatus 
         question2AnswerStatus = "Correct";
         console.log(question2AnswerStatus);
+        userScore = userScore + 15; // will add +15 to userScore
     } else{                                                 
         question2AnswerStatus = "Wrong";
         console.log(question2AnswerStatus);
         timeRemaining = timeRemaining - 10; //wrong = -10 seconds from timer
     }
 
+    console.log("Current Score: " + userScore);
     displayQThree();//will pass user to third question
 }
 
@@ -165,13 +170,14 @@ function userAnswer3(event) {
     if (answerResult === q3CorrectAnswer.id) { //will change gloabl var question3AnswerStatus 
         question3AnswerStatus = "Correct";
         console.log(question3AnswerStatus);
+        userScore = userScore + 15; // will add +15 to userScore
     } else{                                                 
         question3AnswerStatus = "Wrong";
         console.log(question3AnswerStatus);
         timeRemaining = timeRemaining - 10; //wrong = -10 seconds from timer
     }
 
-
+    console.log("Current Score: " + userScore);
     displayQFour();//will pass user to fourth question
 }
 
@@ -194,9 +200,10 @@ function userAnswer4(event) {
     } else{                                                 
         question4AnswerStatus = "Correct";
         console.log(question4AnswerStatus);
+        userScore = userScore + 15; // will add +15 to userScore
     }
 
-
+    console.log("Current Score: " + userScore);
     displayQuizEnd() //will pass user to end quiz page
 }
 
@@ -229,11 +236,6 @@ function sendQuizResult(){
 // 4) need to set id/classes in html for answers for wrong/correct indentification
 // 5) need a way to delay the switch to the next question to user to see the wrong/correct alert
 // 6) need as way to display this wrong/correct alert upon clicking
-
-
-// Incorrect answers take time away from the clock (do this one at the end ^.^)**************
-// 1)as noted above, need ID's or classes to identify incorrect/correct answers
-// 2)need function that will descrease time when inccorect answer is choosen
 
 
 // When game is over, user initials and score can be saved (Mod4Act8 might help) *************
