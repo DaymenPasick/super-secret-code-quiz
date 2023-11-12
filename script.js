@@ -94,14 +94,29 @@ function displayQFour() {
 
 // functions to take in question answers from quiz pages--- answer 4 contains pass to end quiz page----------------------------
 
+var q1CorrectAnswer = document.querySelector("#q1-correct")
+
+
+// function to set answer to correct or wrong
+function correctOrWrong(){
+    if (answerResult){
+        
+    }
+ 
+ }
+ 
+
+
+
 // question answer 1
 var q1Event = document.querySelector("#choice-one");
 q1Event.addEventListener("click", userAnswer);
-
 function userAnswer(event) {
     event.preventDefault();
-    var answer = event.target.textContent;
+    var answer = event.target
     console.log(answer);
+    var answerResult = event.target.id;
+    // console.log(correctOrWrong);
     displayQTwo();//will pass user to second question
 }
 
