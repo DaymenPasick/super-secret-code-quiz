@@ -275,6 +275,13 @@ function tryAgain(event) {
     scorePage.style.display = "none";
 }
 
+// clear leaderboard button
+var clearLeaderButton = document.querySelector("#clear-leaderboard");
+clearLeaderButton.addEventListener("click", clearLocal);
+
+function clearLocal() {
+    localStorage.clear();
+}
 
 
 
