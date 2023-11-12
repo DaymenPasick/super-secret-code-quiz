@@ -5,16 +5,27 @@ var submitInitialsButton = document.querySelector("#submit-initials");
 var userInitials = document.querySelector("#user-initials");
 var storedInitials ="";
 var userScore = 7; //will eventually take in user quiz result
+
 var startPage = document.querySelector(".startPage");
 var quizPage = document.querySelector(".quizPage");
 var endPage = document.querySelector(".endPage");
 var scorePage = document.querySelector(".scorePage");
 
+var startButton = document.querySelector("#start-button");
 
 
 
 
 
+
+//this will make startButton pass the user to Quiz Page section
+function startToQuiz() {
+    startButton.addEventListener("click", displayQuiz);
+}
+
+
+
+// functions to toggle display of each "page"
 function displayStart(){
     startPage.style.display = null;
     quizPage.style.display = "none";
@@ -156,4 +167,5 @@ function init() {
     displayStart();
 }
 
-displayStart();
+init();
+startToQuiz();
