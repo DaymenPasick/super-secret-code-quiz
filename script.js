@@ -55,6 +55,7 @@ function displayQuizEnd(){
     quizPage.style.display = "none";
     endPage.style.display = null;
     scorePage.style.display = "none";
+    calcFinalScore(); //will calc final score and display on screen
 }
 
 
@@ -270,7 +271,6 @@ init();
 
 // Need to way to display answer Corrent/Incorrect answers 
 // 3) while this action triggers a change to next question, it should also display the selected answers wrong/correct status
-// 4) need to set id/classes in html for answers for wrong/correct indentification
 // 5) need a way to delay the switch to the next question to user to see the wrong/correct alert
 // 6) need as way to display this wrong/correct alert upon clicking
 
