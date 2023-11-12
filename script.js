@@ -4,7 +4,7 @@
 var submitInitialsButton = document.querySelector("#submit-initials");
 var userInitials = document.querySelector("#user-initials");
 var storedInitials ="";
-var userScore = 7; //will eventually take in user quiz result
+var userScore = 0;
 
 //for start,quiz,end, and score pages
 var startPage = document.querySelector(".startPage");
@@ -18,7 +18,7 @@ var questionTwo = document.querySelector("#question-two");
 var questionThree = document.querySelector("#question-three");
 var questionFour = document.querySelector("#question-four");
 
-//will be updated based on answer to questions and used for score and timer functions
+//will be used for each question phase of code and given a value accordingly
 var question1AnswerStatus;
 var question2AnswerStatus;
 var question3AnswerStatus;
@@ -99,12 +99,10 @@ function displayQFour() {
 
 
 // functions to handle question answers from quiz pages--- answer 4 contains pass to end quiz page----------------------------
-
 var q1CorrectAnswer = document.querySelector("#q1-correct")
 var q2CorrectAnswer = document.querySelector("#q2-correct")
 var q3CorrectAnswer = document.querySelector("#q3-correct")
 var q4CorrectAnswer = document.querySelector("#q4-wrong") //this is different intentionally
-
 
 // question answer 1
 var q1Event = document.querySelector("#choice-one");
@@ -123,6 +121,8 @@ function userAnswer(event) {
     } else{                                                 
         question1AnswerStatus = "Wrong";
         console.log(question1AnswerStatus);
+        timeRemaining = timeRemaining - 10; //wrong = -10 seconds from timer
+
     }
 
     displayQTwo();//will pass user to second question
@@ -145,6 +145,7 @@ function userAnswer2(event) {
     } else{                                                 
         question2AnswerStatus = "Wrong";
         console.log(question2AnswerStatus);
+        timeRemaining = timeRemaining - 10; //wrong = -10 seconds from timer
     }
 
     displayQThree();//will pass user to third question
@@ -167,6 +168,7 @@ function userAnswer3(event) {
     } else{                                                 
         question3AnswerStatus = "Wrong";
         console.log(question3AnswerStatus);
+        timeRemaining = timeRemaining - 10; //wrong = -10 seconds from timer
     }
 
 
@@ -188,6 +190,7 @@ function userAnswer4(event) {
     if (answerResult === q4CorrectAnswer.id) { //will change gloabl var question1AnswerStatus 
         question4AnswerStatus = "Wrong";
         console.log(question4AnswerStatus);
+        timeRemaining = timeRemaining - 10; //wrong = -10 seconds from timer
     } else{                                                 
         question4AnswerStatus = "Correct";
         console.log(question4AnswerStatus);
@@ -196,7 +199,6 @@ function userAnswer4(event) {
 
     displayQuizEnd() //will pass user to end quiz page
 }
-
 
 
 
