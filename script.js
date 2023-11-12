@@ -12,11 +12,17 @@ var quizPage = document.querySelector(".quizPage");
 var endPage = document.querySelector(".endPage");
 var scorePage = document.querySelector(".scorePage");
 
-//for individual question phases
+//used to toggle between individual question phases
 var questionOne = document.querySelector("#question-one");
 var questionTwo = document.querySelector("#question-two");
 var questionThree = document.querySelector("#question-three");
 var questionFour = document.querySelector("#question-four");
+
+//will be updated based on answer to questions and used for score and timer functions
+var question1AnswerStatus;
+var question2AnswerStatus;
+var question3AnswerStatus;
+var question4AnswerStatus;
 
 
 
@@ -92,7 +98,7 @@ function displayQFour() {
 
 
 
-// functions to take in question answers from quiz pages--- answer 4 contains pass to end quiz page----------------------------
+// functions to handle question answers from quiz pages--- answer 4 contains pass to end quiz page----------------------------
 
 var q1CorrectAnswer = document.querySelector("#q1-correct")
 var q2CorrectAnswer = document.querySelector("#q2-correct")
@@ -100,26 +106,27 @@ var q3CorrectAnswer = document.querySelector("#q2-correct")
 var q4CorrectAnswer = document.querySelector("#q4-wrong") //this is different intentionally
 
 
-// function to set answer to correct or wrong
-function correctOrWrong(){
-    if (answerResult){
-
-    }
- 
- }
- 
-
-
-
 // question answer 1
 var q1Event = document.querySelector("#choice-one");
 q1Event.addEventListener("click", userAnswer);
+
 function userAnswer(event) {
     event.preventDefault();
-    var answer = event.target
+    var answer = event.target;
     console.log(answer);
+
     var answerResult = event.target.id;
-    // console.log(correctOrWrong);
+
+    if (answerResult === q1CorrectAnswer.id) { //will change gloabl var question1AnswerStatus 
+        console.log("correct");
+        question1AnswerStatus = "Correct";
+    } else{                                                 
+        question1AnswerStatus = "Wrong";
+        console.log("wrong");
+    }
+
+
+
     displayQTwo();//will pass user to second question
 }
 
@@ -131,6 +138,8 @@ function userAnswer2(event) {
     event.preventDefault();
     var answer = event.target.textContent;
     console.log(answer);
+
+
     displayQThree();//will pass user to third question
 }
 
@@ -142,6 +151,8 @@ function userAnswer3(event) {
     event.preventDefault();
     var answer = event.target.textContent;
     console.log(answer);
+
+
     displayQFour();//will pass user to fourth question
 }
 
@@ -154,8 +165,9 @@ function userAnswer4(event) {
     event.preventDefault();
     var answer = event.target.textContent;
     console.log(answer);
+
+
     displayQuizEnd() //will pass user to end quiz page
-    
 }
 
 
