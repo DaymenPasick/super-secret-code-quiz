@@ -12,6 +12,9 @@ var scorePage = document.querySelector(".scorePage");
 
 
 
+
+
+
 function displayStart(){
     startPage.style.display = null;
     quizPage.style.display = "none";
@@ -41,7 +44,7 @@ function displayScorePage(){
     scorePage.style.display = null;
 }
 
-displayStart();
+
 
 
 
@@ -147,3 +150,10 @@ function cdTimer() {
     },1000) //this will set in miliseconds the timer interval
 }
 cdTimer();
+
+
+function init() {
+    displayStart();
+}
+
+displayStart();
