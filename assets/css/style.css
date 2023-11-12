@@ -116,7 +116,7 @@
     border: solid 10px var(--border-color);
     border-top-right-radius: 5%;
     border-bottom-right-radius: 5%;
-    display: none;
+    /* display: none; */
  }
 
  section h2 {
@@ -158,7 +158,7 @@
  #question4 {
     display: flex;
     flex-direction: column;
-    display: none;
+    /* display: none; */
     
  }
 
@@ -179,6 +179,7 @@
     border: solid 10px var(--border-color);
     border-top-right-radius: 5%;
     border-bottom-right-radius: 5%;
+    display: none;
 
     
  }

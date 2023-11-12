@@ -8,6 +8,26 @@ var userScore = 7; //will eventually take in user quiz result
 
 
 
+function displayStart(){
+
+}
+
+function displayQuiz(){
+    
+}
+
+function displayQuizEnd(){
+    
+}
+
+
+function displayScorePage(){
+    
+}
+
+
+
+
 
 
 
