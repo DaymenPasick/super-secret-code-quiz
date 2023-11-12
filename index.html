@@ -39,15 +39,16 @@
     <!--Quiz Page ---------------------------------------------------------------->
     <main>
         <section class="quizPage">
-
+                <!-- setting list content within <a>links allow target click events
+                    & css styling -->
                 <!-- question 1 -->
             <div id="question-one">
                 <h2>How do you declare a variable in JavaScript?</h2>
-                <ol class="answer-choices">
-                    <li><a href="">With a semantic tag</a></li>
-                    <li><a href="">variableName = variableValue</a></li>
-                    <li><a href="">With a megaphone</a></li>
-                    <li><a href="">All of the above</a></li>
+                <ol class="answer-choices" id="choice-one">
+                    <li><a href="#!">With a semantic tag</a></li>
+                    <li><a href="#!">variableName = variableValue</a></li>
+                    <li><a href="#!">With a megaphone</a></li>
+                    <li><a href="#!">All of the above</a></li>
                 </ol>
             </div>
 
@@ -55,21 +56,21 @@
             <div id="question-two">
                 <h2>Which of the following is <span class="not">not</span> a Javascript loop?</h2>
                 <ol class="answer-choices">
-                    <li>for (i = 0; i < 6; i++) {} </li>
-                    <li>while (!mathIsTheWorst) {}</li>
-                    <li>let i = 7 || i = 15;</li>
-                    <li>for (exp1; exp2; exp3) {}</li>
+                    <li><a href="#!"></a>for (i = 0; i < 6; i++) {} </li>
+                    <li><a href="#!"></a>while (!mathIsTheWorst) {}</li>
+                    <li><a href="#!"></a>let i = 7 || i = 15;</li>
+                    <li><a href="#!"></a>for (exp1; exp2; exp3) {}</li>
                 </ol>
-            </div>````
+            </div>
 
                 <!-- question 3 -->
             <div id="question-three">
                 <h2>Which of the following is a data type?</h2>
                 <ol class="answer-choices">
-                    <li>Boolean</li>
-                    <li>Number</li>
-                    <li>String</li>
-                    <li>All of the above</li>
+                    <li><a href="#!"></a>Boolean</li>
+                    <li><a href="#!"></a>Number</li>
+                    <li><a href="#!"></a>String</li>
+                    <li><a href="#!"></a>All of the above</li>
                 </ol>
             </div>
 
@@ -77,10 +78,10 @@
             <div id="question-four">
                 <h2>How do you pronounce the name Aang? (choose wisely friend)</h2>
                 <ol class="answer-choices">
-                    <li>Aang...like gang😊</li>
-                    <li>Aang...like dang😊</li>
-                    <li>Aang...like rang😊</li>
-                    <li>aAnG...like gong😡</li>
+                    <li><a href="#!"></a>Aang...like gang😊</li>
+                    <li><a href="#!"></a>Aang...like dang😊</li>
+                    <li><a href="#!"></a>Aang...like rang😊</li>
+                    <li><a href="#!"></a>aAnG...like gong😡</li>
                 </ol>
             </div>    
         </section>
@@ -94,7 +95,7 @@
             <h3>Quiz Is Over</h3>
             <p>Final Score: 00</p>
             <form action="">
-                <label for="uinitials">Enter Initials:</label>
+                <label for="enterinitials">Enter Initials:</label>
                 <input type="text" id="user-initials" name="uinitials">
                 <div id="submit-score">
                     <!-- <button id="submit-initials">Submit Your Score</button> -->

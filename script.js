@@ -23,14 +23,50 @@ startButton.addEventListener("click", displayQuiz);
 
 
 
-var q1Event = document.querySelector("#question-one");
-q1Event.addEventListener("click", justChecking)
 
-function justChecking(event) {
-    event.stopPropagation();
+// functions to take in question answers from quiz pages
+
+// question answer 1
+var q1Event = document.querySelector("#choice-one");
+q1Event.addEventListener("click", userAnswer);
+
+function userAnswer(event) {
     event.preventDefault();
-    console.log("yes")
+    var answer = event.target.textContent;
+    console.log(answer);
 }
+
+// question answer 2
+var q1Event = document.querySelector("#choice-one");
+q1Event.addEventListener("click", userAnswer);
+
+function userAnswer(event) {
+    event.preventDefault();
+    var answer = event.target.textContent;
+    console.log(answer);
+}
+
+// question answer 3
+var q1Event = document.querySelector("#choice-one");
+q1Event.addEventListener("click", userAnswer);
+
+function userAnswer(event) {
+    event.preventDefault();
+    var answer = event.target.textContent;
+    console.log(answer);
+}
+
+
+// question answer 4
+var q1Event = document.querySelector("#choice-one");
+q1Event.addEventListener("click", userAnswer);
+
+function userAnswer(event) {
+    event.preventDefault();
+    var answer = event.target.textContent;
+    console.log(answer);
+}
+
 
 
 
