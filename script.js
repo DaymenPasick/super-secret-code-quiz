@@ -5,6 +5,7 @@ var submitInitialsButton = document.querySelector("#submit-initials");
 var userInitials = document.querySelector("#user-initials");
 var storedInitials ="";
 var userScore = 0;
+var finalScore = 0; //what will display in score screen at end quiz page
 
 //for start,quiz,end, and score pages
 var startPage = document.querySelector(".startPage");
@@ -225,7 +226,7 @@ function sendQuizResult(){
     quizResult = [
         {
             initials: storedInitials,
-            score: userScore,
+            score: finalScore,
         }
     ]
     console.log(quizResult);
@@ -286,3 +287,5 @@ function init() {
 }
 
 init();
+
+
