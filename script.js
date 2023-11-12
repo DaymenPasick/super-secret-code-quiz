@@ -23,6 +23,15 @@ startButton.addEventListener("click", displayQuiz);
 
 
 
+var q1Event = document.querySelector("#question-one");
+q1Event.addEventListener("click", justChecking)
+
+function justChecking(event) {
+    event.stopPropagation();
+    event.preventDefault();
+    console.log("yes")
+}
+
 
 
 // functions to toggle display of each "page"
