@@ -4,21 +4,37 @@
 var submitInitialsButton = document.querySelector("#submit-initials");
 var userInitials = document.querySelector("#user-initials");
 var storedInitials ="";
+var userScore = 7;
 
 
 
 
 
 
-// this will take in user initials from quiz end page and log/store them in local mem
+// this will take in user initials from quiz end page and store it into storedInitials
 function storeUserInitials(event) {
     event.preventDefault();
     storedInitials = userInitials.value
     console.log("User Initials: " + storedInitials);
+    sendQuizResult();
     // functionality needed to store into local memory
 }
 
 submitInitialsButton.addEventListener("click", storeUserInitials);
+
+//this will take both the userScore and storedInitials and store them (eventually as a key pair in local storage)
+function sendQuizResult(){
+    // need to set these values as an object with key:value pairs 
+    quizResult = [
+        {
+            initials: storedInitials,
+            score: userScore,
+        }
+    ]
+
+    console.log(quizResult);
+}
+
 
 
 
@@ -55,9 +71,7 @@ submitInitialsButton.addEventListener("click", storeUserInitials);
 // 3) this timer-zero variable/if statement needs to also bring user to end quiz "page"
 
 // When game is over, user initials and score can be saved (Mod4Act8 might help)
-// need a way to set current user-score points to a variable
-// need a receive user-inputed initials and store it to a variable
-// need a button that, upon clicking, will submit both these variables into local storage
+// need a button that, upon clicking, will submit both these variables into local storage 0000000000000000
 // need a way to take these locally stored values and put them into an Ordered List for leaderboards
 // need to way to sort this list, from highest to greatest
 // need a way to populate these into the highscore/detail tab in the top left of the nav bar   
