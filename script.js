@@ -208,7 +208,15 @@ function userAnswer4(event) {
     displayQuizEnd() //will pass user to end quiz page
 }
 
+//will calculate display user final score in quiz end page
+var finalScoreDisplay = document.querySelector("#final-score-display");
+function calcFinalScore() {
 
+    finalScore = userScore;
+    finalScoreDisplay.textContent = "Final Score: " + finalScore;
+
+
+}
 
 // this will take in user initials from quiz end page and store it into storedInitials-----------------------------------
 function storeUserInitials(event) {
@@ -231,6 +239,34 @@ function sendQuizResult(){
     ]
     console.log(quizResult);
 }
+
+
+// function and variables for countdown timer--- cdTimer will send user to end quiz page when timer runs out -----------------------------------
+var quizTimer = document.querySelector(".time")
+var timeRemaining = 60;
+
+function cdTimer() {
+    var tInterval = setInterval(function(){
+        timeRemaining--;
+        quizTimer.textContent = "Time Remaining: " + timeRemaining;
+        
+        if(timeRemaining === 0) {
+            clearInterval(tInterval);
+            displayQuizEnd(); // will pass user to end quiz page
+        }
+
+
+    },1000) //this will set in miliseconds the timer interval
+}
+
+
+
+function init() {
+    displayStart();
+}
+
+init();
+
 
 // Need to way to display answer Corrent/Incorrect answers 
 // 3) while this action triggers a change to next question, it should also display the selected answers wrong/correct status
@@ -261,31 +297,3 @@ function sendQuizResult(){
 // var li1 = document.createElement("li")
 // orderedList.appendChild(li1)
 //l1.textContent = "leaderBoardStatsFromLocalStorage"
-
-// function and variables for countdown timer--- cdTimer will send user to end quiz page when timer runs out -----------------------------------
-var quizTimer = document.querySelector(".time")
-var timeRemaining = 60;
-
-function cdTimer() {
-    var tInterval = setInterval(function(){
-        timeRemaining--;
-        quizTimer.textContent = "Time Remaining: " + timeRemaining;
-        
-        if(timeRemaining === 0) {
-            clearInterval(tInterval);
-            displayQuizEnd(); // will pass user to end quiz page
-        }
-
-
-    },1000) //this will set in miliseconds the timer interval
-}
-
-
-
-function init() {
-    displayStart();
-}
-
-init();
-
-
