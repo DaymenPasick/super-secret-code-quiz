@@ -17,6 +17,7 @@ startButton.addEventListener("click", displayQuiz);
 
 
 
+
 // functions to toggle display of each "page"
 function displayStart(){
     startPage.style.display = null;
@@ -29,7 +30,8 @@ function displayQuiz(){
     startPage.style.display = "none";
     quizPage.style.display = null;
     endPage.style.display = "none";
-    scorePage.style.display = "none"; 
+    scorePage.style.display = "none";
+    cdTimer(); 
 }
 
 function displayQuizEnd(){
@@ -81,8 +83,6 @@ function sendQuizResult(){
 
 
 // Clicking start button = timer start and presentation of questions**********************
-// 1) need to establish a start button variable w/ html start button assigned
-// 2) need a way to populate a countdown timer into the placeholder html
 // 3) need to assign start button to trigger initiation of timer
 // 4) need to assign start button to trigger switch to question part of the quiz
 
@@ -152,7 +152,7 @@ function cdTimer() {
 
     },1000) //this will set in miliseconds the timer interval
 }
-cdTimer();
+
 
 
 function init() {
