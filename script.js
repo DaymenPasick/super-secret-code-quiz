@@ -235,9 +235,8 @@ function sendQuizResult(event){
         }
     ]
     localStorage.setItem("quizResult", JSON.stringify(quizResult));
-    displayScorePage(); //will pass user to HiScores page
     createLeaderBoard();
- 
+    displayScorePage(); //will pass user to HiScores page
 }
 
 
