@@ -65,3 +65,21 @@
 
 // for timer **************
 var quizTimer = document.querySelector(".time")
+var timeRemaining = 60;
+console.log(quizTimer)
+console.log(timeRemaining)
+
+function cdTimer() {
+    var tInterval = setInterval(function(){
+        timeRemaining--;
+        quizTimer.textContent = timeRemaining;
+
+        if(timeRemaining === 0) {
+            clearInterval(tInterval);
+            // function that will take user to end quiz page
+        }
+
+
+    },1000) //this will set in miliseconds the timer interval
+}
+cdTimer();
