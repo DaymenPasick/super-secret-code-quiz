@@ -1,14 +1,24 @@
 // JavaScript sheet
 
 // Spot for global variables
-subInitialsBut = document.getElementById("#sub-initials-button")
+var submitInitialsButton = document.querySelector("#submit-initials");
+var userInitials = document.querySelector("#user-initials");
+var storedInitials ="";
 
 
 
 
 
-// console.log(subInitialsBut);
 
+// this will take in user initials from quiz end page and log/store them in local mem
+function storeUserInitials(event) {
+    event.preventDefault();
+    storedInitials = userInitials.value
+    console.log("User Initials: " + storedInitials);
+    // functionality needed to store into local memory
+}
+
+submitInitialsButton.addEventListener("click", storeUserInitials);
 
 
 
