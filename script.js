@@ -1,7 +1,7 @@
 // JavaScript sheet
 
 // Household variables
-var submitInitialsButton = document.querySelector("#submit-initials");
+var submitResultsButton = document.querySelector("#submit-results");
 var userInitials = document.querySelector("#user-initials");
 var userScore = 0;
 var storedInitials =""; //will be eddited based off end quiz page user input
@@ -218,19 +218,18 @@ function calcFinalScore() {
 }
 
 // this will take in user initials from quiz end page and store it into storedInitials-----------------------------------
-submitInitialsButton.addEventListener("click", storeUserInitials);
 
-function storeUserInitials(event) {
+
+//this will take both the userScore and storedInitials into an 
+// object named quizResult and the object into local storage
+submitResultsButton.addEventListener("click", sendQuizResult);
+function sendQuizResult(event){
+
     event.preventDefault();
     storedInitials = userInitials.value
     console.log("User Initials: " + storedInitials);
-    // functionality needed to store into local memory
-}
 
 
-//this will take both the userScore and storedInitials create a variable object (eventually as a key pair in local storage)
-function sendQuizResult(){
-    // need to set these values as an object with key:value pairs 
     quizResult = [
         {
             initials: storedInitials,
