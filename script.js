@@ -95,12 +95,15 @@ function displayQFour() {
 // functions to take in question answers from quiz pages--- answer 4 contains pass to end quiz page----------------------------
 
 var q1CorrectAnswer = document.querySelector("#q1-correct")
+var q2CorrectAnswer = document.querySelector("#q2-correct")
+var q3CorrectAnswer = document.querySelector("#q2-correct")
+var q4CorrectAnswer = document.querySelector("#q4-wrong") //this is different intentionally
 
 
 // function to set answer to correct or wrong
 function correctOrWrong(){
     if (answerResult){
-        
+
     }
  
  }
