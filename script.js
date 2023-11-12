@@ -242,14 +242,17 @@ function sendQuizResult(event){
 
 
 //function to take local storage HiScore and create a leaderboard
+var quizResultReturn = JSON.parse(localStorage.getItem("quizResult"));
 
 function createLeaderBoard() {
-var quizResultReturn = JSON.parse(localStorage.getItem("quizResult"));
-var returnedInitials = quizResultReturn[0].initials; // return of locally stored user initials
-var returnedScore = quizResultReturn[0].score; // return of locally stored user initials
-console.log(quizResultReturn);
-console.log(returnedInitials);
-console.log(returnedScore);
+    // will verify quizResultReturn from local storage & pass object into function
+    if (quizResultReturn !== null) {
+    var returnedInitials = quizResultReturn[0].initials; // returned initials from local storage
+    var returnedScore = quizResultReturn[0].score; // returned password from local storage
+
+    console.log(quizResultReturn);
+    console.log(returnedInitials);
+    console.log(returnedScore);
 }
 
 
