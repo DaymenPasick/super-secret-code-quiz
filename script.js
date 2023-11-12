@@ -200,11 +200,9 @@ function sendQuizResult(){
 // orderedList.appendChild(li1)
 //l1.textContent = "leaderBoardStatsFromLocalStorage"
 
-// for timer **************
+// function and variables for countdown timer--- cdTimer will send user to end quiz page when timer runs out -----------------------------------
 var quizTimer = document.querySelector(".time")
 var timeRemaining = 60;
-console.log(quizTimer)
-console.log(timeRemaining)
 
 function cdTimer() {
     var tInterval = setInterval(function(){
@@ -213,7 +211,7 @@ function cdTimer() {
         
         if(timeRemaining === 0) {
             clearInterval(tInterval);
-            // function that will take user to end quiz page
+            displayQuizEnd(); // will pass user to end quiz page
         }
 
 
