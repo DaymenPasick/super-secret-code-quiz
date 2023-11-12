@@ -62,6 +62,7 @@ function displayScorePage(){
     quizPage.style.display = "none";
     endPage.style.display = "none";
     scorePage.style.display = null;
+    createLeaderBoard();
 }
 
 
@@ -236,24 +237,20 @@ function sendQuizResult(event){
     ]
     localStorage.setItem("quizResult", JSON.stringify(quizResult));
     displayScorePage(); //will pass user to HiScores page
-    createLeaderBoard(); 
+ 
 }
 
 
 //function to take local storage HiScore and create a leaderboard
-var quizResultReturn = JSON.parse(localStorage.getItem("quizResult"));
 
 function createLeaderBoard() {
-
-    console.log(quizResultReturn)
-    var returnedInitials = quizResultReturn.textContent;
-    // if(quizResultReturn !== null){
-       
-
-    // }
-
-    console.log(returnedInitials)
-
+var quizResultReturn = JSON.parse(localStorage.getItem("quizResult"));
+var returnedInitials = quizResultReturn[0].initials; // return of locally stored user initials
+var returnedScore = quizResultReturn[0].score; // return of locally stored user initials
+console.log(quizResultReturn);
+console.log(returnedInitials);
+console.log(returnedScore);
+}
 
 
 
