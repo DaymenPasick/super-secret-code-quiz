@@ -62,7 +62,6 @@ function displayScorePage(){
     quizPage.style.display = "none";
     endPage.style.display = "none";
     scorePage.style.display = null;
-    createLeaderBoard();
 }
 
 
@@ -225,7 +224,7 @@ function sendQuizResult(event){
 
     //will take in and user initials from end quiz page 
     event.preventDefault();
-    storedInitials = userInitials.value
+    storedInitials = userInitials.value //value  = initials input from user
     console.log("User Initials: " + storedInitials);
 
 
@@ -237,6 +236,7 @@ function sendQuizResult(event){
     ]
     localStorage.setItem("quizResult", JSON.stringify(quizResult));
     displayScorePage(); //will pass user to HiScores page
+    createLeaderBoard();
  
 }
 
@@ -257,11 +257,24 @@ function createLeaderBoard() {
     }
 
     document.querySelector("#leaderboard-user").textContent = "User: " + returnedInitials;
-    document.querySelector("#leaderboard-score").textContent = "User: " + returnedScore;
+    document.querySelector("#leaderboard-score").textContent = "Score: " + returnedScore;
     
 
 
 }
+
+//try again button in HiScores page. Clears user input and refreshes to start page
+var tryAgainButton = document.querySelector("#try-again");
+tryAgainButton.addEventListener("click", tryAgain);
+
+function tryAgain(event) {
+    location.reload(true); //will reload start page and clear old settings while clearing user input
+    startPage.style.display = null;
+    quizPage.style.display = "none";
+    endPage.style.display = "none";
+    scorePage.style.display = "none";
+}
+
 
 
 
@@ -294,10 +307,7 @@ init();
 // 5) need a way to delay the switch to the next question to user to see the wrong/correct alert
 // 6) need as way to display this wrong/correct alert upon clicking
 
-
-// need a way to take these locally stored values and put them into an Ordered List for leaderboards
-// need to way to sort this list, from highest to greatest
-// need a way to populate these into the highscore/detail tab in the top left of the nav bar   
-
+  
+// need to figure out exact placement of creating/storing local object and retreiving them
 
 
