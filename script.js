@@ -37,7 +37,7 @@
 // 2) need a way to recognize the timer hitting 0, and set that event to a variable/if statement
 // 3) this timer-zero variable/if statement needs to also bring user to end quiz "page"
 
-// When game is over, user initials and score can be saved
+// When game is over, user initials and score can be saved (Mod4Act8 might help)
 // need a way to set current user-score points to a variable
 // need a receive user-inputed initials and store it to a variable
 // need a button that, upon clicking, will submit both these variables into local storage
@@ -62,3 +62,6 @@
 // var li1 = document.createElement("li")
 // orderedList.appendChild(li1)
 //l1.textContent = "leaderBoardStatsFromLocalStorage"
+
+// for timer **************
+var quizTimer = document.querySelector(".time")
