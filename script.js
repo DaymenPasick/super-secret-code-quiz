@@ -4,7 +4,7 @@
 var submitInitialsButton = document.querySelector("#submit-initials");
 var userInitials = document.querySelector("#user-initials");
 var storedInitials ="";
-var userScore = 7;
+var userScore = 7; //will eventually take in user quiz result
 
 
 
@@ -19,10 +19,9 @@ function storeUserInitials(event) {
     sendQuizResult();
     // functionality needed to store into local memory
 }
-
 submitInitialsButton.addEventListener("click", storeUserInitials);
 
-//this will take both the userScore and storedInitials and store them (eventually as a key pair in local storage)
+//this will take both the userScore and storedInitials create a variable object (eventually as a key pair in local storage)
 function sendQuizResult(){
     // need to set these values as an object with key:value pairs 
     quizResult = [
@@ -31,7 +30,6 @@ function sendQuizResult(){
             score: userScore,
         }
     ]
-
     console.log(quizResult);
 }
 
@@ -62,8 +60,6 @@ function sendQuizResult(){
 // Incorrect answers take time away from the clock (do this one at the end ^.^)**************
 // 1)as noted above, need ID's or classes to identify incorrect/correct answers
 // 2)need function that will descrease time when inccorect answer is choosen
-// 3)****need way to initiate timer
-// 4)need a way to identify active timer and put it into a variable for manipulation
 
 // Questions finished/Timer run-out = end of quiz********************************************
 // 1) final question page click event needs to also transfer user to end quiz "page"
@@ -71,7 +67,6 @@ function sendQuizResult(){
 // 3) this timer-zero variable/if statement needs to also bring user to end quiz "page"
 
 // When game is over, user initials and score can be saved (Mod4Act8 might help)
-// need a button that, upon clicking, will submit both these variables into local storage 0000000000000000
 // need a way to take these locally stored values and put them into an Ordered List for leaderboards
 // need to way to sort this list, from highest to greatest
 // need a way to populate these into the highscore/detail tab in the top left of the nav bar   
