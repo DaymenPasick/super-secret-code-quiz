@@ -102,7 +102,7 @@ function displayQFour() {
 
 var q1CorrectAnswer = document.querySelector("#q1-correct")
 var q2CorrectAnswer = document.querySelector("#q2-correct")
-var q3CorrectAnswer = document.querySelector("#q2-correct")
+var q3CorrectAnswer = document.querySelector("#q3-correct")
 var q4CorrectAnswer = document.querySelector("#q4-wrong") //this is different intentionally
 
 
@@ -137,6 +137,15 @@ function userAnswer2(event) {
     var answer = event.target; //for checking what click event is targetting
     console.log(answer);
 
+    var answerResult = event.target.id;
+
+    if (answerResult === q2CorrectAnswer.id) { //will change gloabl var question2AnswerStatus 
+        question2AnswerStatus = "Correct";
+        console.log(question2AnswerStatus);
+    } else{                                                 
+        question2AnswerStatus = "Wrong";
+        console.log(question2AnswerStatus);
+    }
 
     displayQThree();//will pass user to third question
 }
@@ -149,6 +158,16 @@ function userAnswer3(event) {
     event.preventDefault();
     var answer = event.target; //for checking what click event is targetting
     console.log(answer);
+
+    var answerResult = event.target.id;
+
+    if (answerResult === q3CorrectAnswer.id) { //will change gloabl var question3AnswerStatus 
+        question3AnswerStatus = "Correct";
+        console.log(question3AnswerStatus);
+    } else{                                                 
+        question3AnswerStatus = "Wrong";
+        console.log(question3AnswerStatus);
+    }
 
 
     displayQFour();//will pass user to fourth question
@@ -163,6 +182,16 @@ function userAnswer4(event) {
     event.preventDefault();
     var answer = event.target; //for checking what click event is targetting
     console.log(answer);
+
+    var answerResult = event.target.id;
+
+    if (answerResult === q4CorrectAnswer.id) { //will change gloabl var question1AnswerStatus 
+        question4AnswerStatus = "Wrong";
+        console.log(question4AnswerStatus);
+    } else{                                                 
+        question4AnswerStatus = "Correct";
+        console.log(question4AnswerStatus);
+    }
 
 
     displayQuizEnd() //will pass user to end quiz page
