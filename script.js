@@ -36,7 +36,8 @@ function displayQuiz(){
     quizPage.style.display = null;
     endPage.style.display = "none";
     scorePage.style.display = "none";
-    cdTimer(); 
+    cdTimer();
+    displayQOne()
 }
 
 function displayQuizEnd(){
@@ -59,18 +60,31 @@ function displayScorePage(){
 
 function displayQOne() {
     questionOne.style.display = null;
+    questionTwo.style.display = "none";
+    questionThree.style.display = "none";
+    questionFour.style.display = "none";
 }
 
 function displayQTwo() {
+    questionOne.style.display = "none";
+    questionTwo.style.display = null;
+    questionThree.style.display = "none";
+    questionFour.style.display = "none";
 
 }
 
 function displayQThree() {
-
+    questionOne.style.display = "none";
+    questionTwo.style.display = "none";
+    questionThree.style.display = null;
+    questionFour.style.display = "none";
 }
 
 function displayQFour() {
-
+    questionOne.style.display = "none";
+    questionTwo.style.display = "none";
+    questionThree.style.display = "none";
+    questionFour.style.display = null;
 }
 
 
