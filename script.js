@@ -236,13 +236,16 @@ function sendQuizResult(event){
     ]
     localStorage.setItem("quizResult", JSON.stringify(quizResult));
     console.log(quizResult);
+    displayScorePage(); //will pass user to HiScores page
+    createLeaderBoard(); //will pass user to HiScores page
 }
 
 
 //function to take local storage HiScore and create a leaderboard
-var quizResultReturn = JSON.parse(localStorage.getItem(quizResult));
+var quizResultReturn = JSON.parse(localStorage.getItem("quizResult"));
 function createLeaderBoard() {
 
+    console.log(quizResultReturn)
 // document.body.children[0].children[0].append(leaderBoardReturn)
 
 // var leaderBoardReturn = "sucess!";
