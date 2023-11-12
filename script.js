@@ -235,28 +235,25 @@ function sendQuizResult(event){
         }
     ]
     localStorage.setItem("quizResult", JSON.stringify(quizResult));
-    console.log(quizResult);
     displayScorePage(); //will pass user to HiScores page
-    createLeaderBoard(); //will pass user to HiScores page
+    createLeaderBoard(); 
 }
 
 
 //function to take local storage HiScore and create a leaderboard
 var quizResultReturn = JSON.parse(localStorage.getItem("quizResult"));
+
 function createLeaderBoard() {
 
     console.log(quizResultReturn)
-// document.body.children[0].children[0].append(leaderBoardReturn)
+    var returnedInitials = quizResultReturn.textContent;
+    // if(quizResultReturn !== null){
+       
 
-// var leaderBoardReturn = "sucess!";
-// document.body.children[0].children[0].append(leaderBoardReturn);
-// console.log(document.body.children[0].children[0]);
-// this syntax could also accomplish this for an ordered list
-// var orderedList = document.createEelement("ol")
-// var li1 = document.createElement("li")
-// orderedList.appendChild(li1)
-//l1.textContent = "leaderBoardStatsFromLocalStorage"
-}
+    // }
+
+    console.log(returnedInitials)
+
 
 
 
