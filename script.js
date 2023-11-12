@@ -22,7 +22,7 @@ var startButton = document.querySelector("#start-button");
 startButton.addEventListener("click", displayQuiz);
 
 
-// functions to toggle display of each "page"
+// functions to toggle display of each "page"-- displayQuiz contains timer start & pass to question1 ---------------------------
 function displayStart(){
     startPage.style.display = null;
     quizPage.style.display = "none";
@@ -56,7 +56,7 @@ function displayScorePage(){
 
 
 
-// functions to toggle through each quiz question
+// functions to toggle through each quiz question -----------------------------------------------------------
 function displayQOne() {
     questionOne.style.display = null;
     questionTwo.style.display = "none";
@@ -88,7 +88,7 @@ function displayQFour() {
 
 
 
-// functions to take in question answers from quiz pages
+// functions to take in question answers from quiz pages--- answer 4 contains pass to end quiz page----------------------------
 
 // question answer 1
 var q1Event = document.querySelector("#choice-one");
@@ -139,7 +139,7 @@ function userAnswer4(event) {
 
 
 
-// this will take in user initials from quiz end page and store it into storedInitials
+// this will take in user initials from quiz end page and store it into storedInitials-----------------------------------
 function storeUserInitials(event) {
     event.preventDefault();
     storedInitials = userInitials.value
