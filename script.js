@@ -239,7 +239,21 @@ function sendQuizResult(event){
 }
 
 
+//function to take local storage HiScore and create a leaderboard
+var quizResultReturn = JSON.parse(localStorage.getItem(quizResult));
+function createLeaderBoard() {
 
+// document.body.children[0].children[0].append(leaderBoardReturn)
+
+// var leaderBoardReturn = "sucess!";
+// document.body.children[0].children[0].append(leaderBoardReturn);
+// console.log(document.body.children[0].children[0]);
+// this syntax could also accomplish this for an ordered list
+// var orderedList = document.createEelement("ol")
+// var li1 = document.createElement("li")
+// orderedList.appendChild(li1)
+//l1.textContent = "leaderBoardStatsFromLocalStorage"
+}
 
 
 
@@ -261,12 +275,9 @@ function cdTimer() {
     },1000) //this will set in miliseconds the timer interval
 }
 
-
-
 function init() {
     displayStart();
 }
-
 init();
 
 
@@ -276,7 +287,6 @@ init();
 // 6) need as way to display this wrong/correct alert upon clicking
 
 
-// When game is over, user initials and score can be saved (Mod4Act8 might help) *************
 // need a way to take these locally stored values and put them into an Ordered List for leaderboards
 // need to way to sort this list, from highest to greatest
 // need a way to populate these into the highscore/detail tab in the top left of the nav bar   
@@ -287,14 +297,4 @@ init();
 // possible functionality to create text/data/variable based on user input. May
 // be able to use it to populate hiscore back into an ordered list?
 
-// var leaderBoardReturn = locallyStoredScoresReturned;
-// document.body.children[0].children[0].append(leaderBoardReturn)
 
-// var leaderBoardReturn = "sucess!";
-// document.body.children[0].children[0].append(leaderBoardReturn);
-// console.log(document.body.children[0].children[0]);
-// this syntax could also accomplish this for an ordered list
-// var orderedList = document.createEelement("ol")
-// var li1 = document.createElement("li")
-// orderedList.appendChild(li1)
-//l1.textContent = "leaderBoardStatsFromLocalStorage"
