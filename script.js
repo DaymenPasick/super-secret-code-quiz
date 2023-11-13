@@ -257,9 +257,9 @@ function editQuizResult() {
     console.log(quizResult);
  }
 
-// will send quizResult object to local storage (may be able to edit for leaderBoard Object)
-function quizResultToLocal() {
-    localStorage.setItem("quizResult", JSON.stringify(quizResult));
+// will send leaderBoard array to local storage (still need to test)
+function leaderBoardToLocal() {
+    localStorage.setItem("leaderBoard", JSON.stringify(leaderBoard));
 }
 
 
@@ -312,6 +312,7 @@ function sendNewScore(event) {
     localStorage.setItem("storedInitials", storedInitials)
     localGetFinalAndInitials()
     editQuizResult()
+    leaderBoardToLocal()
 }
 
 
