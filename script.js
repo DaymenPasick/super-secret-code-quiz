@@ -347,8 +347,8 @@ function localPrintToHiScorePage() {
     renderBoardInitials = JSON.parse(localStorage.getItem("leaderBoard"))[0].initials;
     renderBoardScore = JSON.parse(localStorage.getItem("leaderBoard"))[0].score;
 
-    quizResultInitials;
-    quizResultScore; 
+    quizResultInitials = renderBoardInitials;
+    quizResultScore = renderBoardScore; 
     console.log(renderBoardInitials);
     console.log(renderBoardScore);
 
