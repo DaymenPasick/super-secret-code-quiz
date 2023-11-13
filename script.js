@@ -216,6 +216,12 @@ function calcFinalScore() {
 
 }
 
+//function to take local storage quizResult and create a leaderboard with the data
+var quizResultReturn = JSON.parse(localStorage.getItem("quizResult"));
+var leaderBoardReturn
+
+
+
 
 //this will take both the userScore and storedInitials into an 
 // object named quizResult and the object into local storage
@@ -235,14 +241,11 @@ function sendQuizResult(event){
         }
     ]
     localStorage.setItem("quizResult", JSON.stringify(quizResult));
-    createLeaderBoard();
+    createLeaderBoard(); // this will get returns from quizResult in local, make them variables, and populate them into hiscores page
     displayScorePage(); //will pass user to HiScores page
 }
 
 
-//function to take local storage quizResult and create a leaderboard with the data
-var quizResultReturn = JSON.parse(localStorage.getItem("quizResult"));
-var leaderBoardReturn
 
 function createLeaderBoard() {
     // will verify quizResultReturn from local storage & pass object into function
@@ -255,12 +258,12 @@ function createLeaderBoard() {
     console.log(returnedScore);
     }
 
-    document.querySelector("#leaderboard-user").textContent = "User: " + returnedInitials;
+    document.querySelector("#leaderboard-user").textContent = "User: " + returnedInitials; 
     document.querySelector("#leaderboard-score").textContent = "Score: " + returnedScore;
-    
-
-
 }
+
+
+
 
 //try again button in HiScores page. Clears user input and refreshes to start page
 var tryAgainButton = document.querySelector("#try-again");
