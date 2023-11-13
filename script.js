@@ -331,7 +331,7 @@ function calcFinalScore() {
 
 // button will send initials to local and build quizResult object
 submitResultsButton.addEventListener("click", buildNewScore);
-
+var quizResult;
 function buildNewScore(event) {
     event.preventDefault();
     
@@ -342,13 +342,14 @@ function buildNewScore(event) {
     var retrievedInitials;
     var retrievedScore;
 
-    var quizResult = [
+     quizResult = [
         {
          initials: retrievedInitials,
          score: retrievedScore,
         }
     ]
     getFinalAndInitials()
+    editQuizResult() 
 }
 
 // function will retrieve final score and user initials from local and set to variables
@@ -361,6 +362,10 @@ function buildNewScore(event) {
  }
 
 // push into array
-
+ function editQuizResult() {
+    quizResult.initials = retrievedInitials;
+    quizResult.score = retrievedScore;
+    console.log(quizResult);
+ }
 
 // set to local storage
