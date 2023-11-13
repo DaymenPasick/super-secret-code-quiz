@@ -246,22 +246,43 @@ function clearLocal() {
 }
 
 
+//====================================== functions will take in initial score and inputs and store in local =======================
 
-// ===================================================================== new format attempt
 
+//will calculate display user final score in quiz end page----- will also send finalScore to local
+var finalScoreDisplay = document.querySelector("#final-score-display");
+var finalScore = 0; 
 
-// function will push score and initials into quizResult object (may be able to edit for LeaderBoard Object)
-function editQuizResult() {
-    quizResult.initials = initialsFromLocal;
-    quizResult.score = scoreFromLocal;
-    console.log(quizResult);
- }
-
-// will send leaderBoard array to local storage (still need to test)
-function leaderBoardToLocal() {
-    localStorage.setItem("leaderBoard", JSON.stringify(leaderBoard));
+function sendFinalScore() {
+    finalScore = userScore;
+    finalScoreDisplay.textContent = "Final Score: " + finalScore;
+    localStorage.setItem("finalScore", finalScore)
 }
 
+
+// button will send storedInitials to local
+var submitResultsButton = document.querySelector("#submit-results");
+submitResultsButton.addEventListener("click", sendNewScore);
+var userInitials = document.querySelector("#user-initials");
+var storedInitials =""; 
+
+
+function sendNewScore(event) {
+    event.preventDefault();  
+    storedInitials = userInitials.value //value  = initials input from user
+    localStorage.setItem("storedInitials", storedInitials)
+    localGetFinalAndInitials()
+    editQuizResult()
+    leaderBoardToLocal()
+}
+
+
+//====================================== functions will take in initial score and inputs and store in local =======================
+
+
+
+
+//====================================== functions will build leaderBoard Object ==================================================
 
 //for Array leaderBoard that will serve as long-term store of scores in local
 var leaderBoard = [];
@@ -284,36 +305,22 @@ function updateLeaderBoard() {
          leaderBoard.push(quizResult)                                                               
 }
 
+//====================================== functions will build leaderBoard Object ==================================================
 
 
-//will calculate display user final score in quiz end page----- will also send finalScore to local
-var finalScoreDisplay = document.querySelector("#final-score-display");
-var finalScore = 0; 
 
-function sendFinalScore() {
-    finalScore = userScore;
-    finalScoreDisplay.textContent = "Final Score: " + finalScore;
-    localStorage.setItem("finalScore", finalScore)
+// function will push score and initials into quizResult object (may be able to edit for LeaderBoard Object)
+function editQuizResult() {
+    quizResult.initials = initialsFromLocal;
+    quizResult.score = scoreFromLocal;
+    console.log(quizResult);
+ }
+
+// will send leaderBoard array to local storage (still need to test)
+function leaderBoardToLocal() {
+    localStorage.setItem("leaderBoard", JSON.stringify(leaderBoard));
 }
 
-
-// button will send storedInitials to local
-var submitResultsButton = document.querySelector("#submit-results");
-submitResultsButton.addEventListener("click", sendNewScore);
-var userInitials = document.querySelector("#user-initials");
-var storedInitials =""; 
-
-                                                                    //step 2 take in score & initials and send to local
-                                                                    //locals: finalScore & storedInitials
-
-function sendNewScore(event) {
-    event.preventDefault();  
-    storedInitials = userInitials.value //value  = initials input from user
-    localStorage.setItem("storedInitials", storedInitials)
-    localGetFinalAndInitials()
-    editQuizResult()
-    leaderBoardToLocal()
-}
 
 
 // function will retrieve final score and user initials from local and set to variables
@@ -325,11 +332,14 @@ var scoreFromLocal;
      scoreFromLocal = localStorage.getItem("finalScore");
      console.log("Initials from local: " + initialsFromLocal);
      console.log("Final score from local: " + scoreFromLocal);
-                                                                // need to use these two functions for objectpush to array
+                                                                
  }
 
 
 
+
+
+// first need to establish flow of leaderboard to local
 //function to take local storage quizResult and create a leaderboard with the data (need to edit to take from LeaderBoard)
 var quizResultInitials;
 var quizResultScore;
