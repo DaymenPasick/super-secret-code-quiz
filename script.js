@@ -321,7 +321,7 @@ var scoreFromLocal;
 function editQuizResult() {
     quizResult.initials = initialsFromLocal;
     quizResult.score = scoreFromLocal;
-    console.log(quizResult)
+    // console.log(quizResult)
  }
 
 //================================functions will manage data going into leaderBoard Object =============================================
@@ -344,8 +344,8 @@ function localPrintToHiScorePage() {
     var renderBoardInitials;
     var renderBoardScore;
 
-    renderBoardInitials = JSON.parse(localStorage.getItem("leaderBoard")).initials;
-    renderBoardScore = JSON.parse(localStorage.getItem("leaderBoard")).score;
+    renderBoardInitials = JSON.parse(localStorage.getItem("leaderBoard"))[0].initials;
+    renderBoardScore = JSON.parse(localStorage.getItem("leaderBoard"))[0].score;
 
     quizResultInitials;
     quizResultScore; 
