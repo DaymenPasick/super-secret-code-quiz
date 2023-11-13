@@ -248,7 +248,6 @@ function clearLocal() {
 
 //===============================functions will take in initials input/quiz score and store in local =======================
 
-
 //will calculate display user final score in quiz end page----- will also send finalScore to local
 var finalScoreDisplay = document.querySelector("#final-score-display");
 var finalScore = 0; 
@@ -272,19 +271,17 @@ function sendNewScore(event) {
     storedInitials = userInitials.value //value  = initials input from user
     localStorage.setItem("storedInitials", storedInitials)
     localGetFinalAndInitials()
-    editQuizResult();
+    editQuizResult();               //function group for local storage score and leaderboard flow
     updateLeaderBoard()
     leaderBoardToLocal()
 }
-
-
 //===============================functions will take in initial score and inputs and store in local =======================
 
 
 
 
 
-//==============================functions will build/manage leaderBoard Array ==================================================
+//==============================function will build/manage leaderBoard Array ==================================================
 
 //for Array leaderBoard that will serve as long-term store of scores in local
 var leaderBoard = [];
@@ -292,22 +289,12 @@ var quizResult = {};
 var boardScore;
 var boardInit;                                                           
 
-//function will create a new array based off local returned object and push to leaderBoard
+//function will create a new object based off local storage scores and push to leaderBoard array
 function updateLeaderBoard() {
-        
 
-        // boardScore ="";
-        // boardInit = "";
-        // quizResult.boardScore = "";
-        // quizResult.boardInit = "";                              //step 1: Build object array leaderBoard
-                                                                            //we will push new score objects into this
-                                                                            //every time quiz is attempted 
-                                                                        //this will be our hiscores store in local
-                                                                     
          leaderBoard.push(quizResult)                                                               
 }
-
-//================================functions will build/manage leaderBoard Array ==================================================
+//================================function will build/manage leaderBoard Array ==================================================
 
 
 
@@ -336,13 +323,10 @@ function editQuizResult() {
     console.log(quizResult)
  }
 
-
-
-
 //================================functions will manage data going into leaderBoard Object =============================================
 
 
-
+//===================functions will manage data coming out of leaderBoard Object =======================================================
 
 // will send leaderBoard array to local storage (still need to test)
 function leaderBoardToLocal() {
@@ -351,7 +335,6 @@ function leaderBoardToLocal() {
 
 
 
-// first need to establish flow of leaderboard to local
 //function to take local storage quizResult and create a leaderboard with the data (need to edit to take from LeaderBoard)
 var quizResultInitials;
 var quizResultScore;
@@ -367,3 +350,4 @@ function localPrintToHiScorePage() {
     displayScorePage();
 }
 
+//===================functions will manage data coming out of leaderBoard Object =======================================================
