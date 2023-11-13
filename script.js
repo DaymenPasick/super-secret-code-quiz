@@ -53,7 +53,8 @@ function displayQuizEnd(){
     quizPage.style.display = "none";
     endPage.style.display = null;
     scorePage.style.display = "none";
-    calcFinalScore(); //will calc final score and display on screen
+    calcFinalScore();
+    
 }
 
 
@@ -207,14 +208,7 @@ function userAnswer4(event) {
     displayQuizEnd() //will pass user to end quiz page
 }
 
-//will calculate display user final score in quiz end page
-var finalScoreDisplay = document.querySelector("#final-score-display");
-function calcFinalScore() {
 
-    finalScore = userScore;
-    finalScoreDisplay.textContent = "Final Score: " + finalScore;
-
-}
 
 //function to take local storage quizResult and create a leaderboard with the data
 var quizResultReturn = JSON.parse(localStorage.getItem("quizResult"));
@@ -225,25 +219,6 @@ var leaderBoardReturn
 
 //this will take both the userScore and storedInitials into an 
 // object named quizResult and the object into local storage
-submitResultsButton.addEventListener("click", sendQuizResult);
-function sendQuizResult(event){
-
-    //will take in and user initials from end quiz page 
-    event.preventDefault();
-    storedInitials = userInitials.value //value  = initials input from user
-    console.log("User Initials: " + storedInitials);
-
-
-    quizResult = [
-        {
-            initials: storedInitials,
-            score: finalScore,
-        }
-    ]
-    localStorage.setItem("quizResult", JSON.stringify(quizResult));
-    createLeaderBoard(); // this will get returns from quizResult in local, make them variables, and populate them into hiscores page
-    displayScorePage(); //will pass user to HiScores page
-}
 
 
 
@@ -321,3 +296,61 @@ init();
 
 
 // Need to follow build, get, push, set pattern
+
+
+// Build object
+
+function sendQuizResult(event){
+
+    //will take in and user initials from end quiz page 
+    event.preventDefault();
+    
+    console.log("User Initials: " + storedInitials);
+
+
+    quizResult = [
+        {
+            initials: storedInitials,
+            score: finalScore,
+        }
+    ]
+    localStorage.setItem("quizResult", JSON.stringify(quizResult));
+    createLeaderBoard(); // this will get returns from quizResult in local, make them variables, and populate them into hiscores page
+    displayScorePage(); //will pass user to HiScores page
+}
+
+
+//will calculate display user final score in quiz end page
+var finalScoreDisplay = document.querySelector("#final-score-display");
+function calcFinalScore() {
+
+    finalScore = userScore;
+    finalScoreDisplay.textContent = "Final Score: " + finalScore;
+}
+
+
+// function to build quizResult object
+// submitResultsButton.addEventListener("click", sendQuizResult);
+
+
+function buildNewScore() {
+    
+
+    storedInitials = userInitials.value //value  = initials input from user
+
+    var quizResult = [
+        {
+         initials: storedInitials,
+         score: finalScore,
+        }
+    ]
+
+}
+
+// get from local storage
+
+
+// push into array
+
+
+// set to local storage
