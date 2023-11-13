@@ -325,7 +325,7 @@ var finalScoreDisplay = document.querySelector("#final-score-display");
 function calcFinalScore() {
     finalScore = userScore;
     finalScoreDisplay.textContent = "Final Score: " + finalScore;
-    localStorage.setItem("Final Score", finalScore)
+    localStorage.setItem("finalScore", finalScore)
 }
 
 
@@ -339,17 +339,26 @@ function buildNewScore(event) {
     storedInitials = userInitials.value //value  = initials input from user
     localStorage.setItem("storedInitials", storedInitials)
 
+    var retrievedInitials;
+    var retrievedScore;
+
     var quizResult = [
         {
-         initials: storedInitials,
-         score: finalScore,
+         initials: retrievedInitials,
+         score: retrievedScore,
         }
     ]
-
+    getFinalAndInitials()
 }
 
-// get from local storage
+// function will retrieve final score and user initials from local and set to variables
+ function getFinalAndInitials() {
+     retrievedInitials = localStorage.getItem("storedInitials");
+     retrievedScore = localStorage.getItem("finalScore");
+     console.log("Initials from local: " + retrievedInitials);
+     console.log("Final score from local: " + retrievedScore);
 
+ }
 
 // push into array
 
