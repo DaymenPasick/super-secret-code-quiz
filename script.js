@@ -350,12 +350,14 @@ function quizResultToLocal() {
 
 
 //function to take local storage quizResult and create a leaderboard with the data
-var quizResultInitials = JSON.parse(localStorage.getItem("quizResult")).initials;
-var quizResultScore = JSON.parse(localStorage.getItem("quizResult")).score;
+var quizResultInitials;
+var quizResultScore;
 
 function localToLeaderBoard() {
-    console.log("initial result: " + quizResultInitials);
-    console.log("score result: " + quizResultScore);
+    quizResultInitials = JSON.parse(localStorage.getItem("quizResult")).initials;
+    quizResultScore = JSON.parse(localStorage.getItem("quizResult")).score;
+    console.log(quizResultInitials);
+    console.log(quizResultScore);
 }
 
 //this will take both the userScore and storedInitials into an 
