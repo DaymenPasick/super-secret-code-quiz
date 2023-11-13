@@ -1,11 +1,5 @@
 // JavaScript sheet
 
-// Household variables
-var submitResultsButton = document.querySelector("#submit-results");
-var userInitials = document.querySelector("#user-initials");
-var userScore = 0;
-var storedInitials =""; //will be eddited based off end quiz page user input
-var finalScore = 0; //what will display in score screen at end quiz page
 
 //for start, quiz, quiz-end, and HiScore pages
 var startPage = document.querySelector(".startPage");
@@ -109,6 +103,7 @@ var q4CorrectAnswer = document.querySelector("#q4-wrong") //this is different in
 // question answer 1
 var q1Event = document.querySelector("#choice-one");
 q1Event.addEventListener("click", userAnswer);
+var userScore = 0;
 
 function userAnswer(event) {
     event.preventDefault();
@@ -261,15 +256,11 @@ init();
 // 5) need a way to delay the switch to the next question to user to see the wrong/correct alert
 // 6) need as way to display this wrong/correct alert upon clicking
 
-  
-// need to figure out exact placement of creating/storing local object and retreiving them
-
-
-// Need to follow build, get, push, set pattern
 
 
 // Build object
-
+var finalScore = 0; 
+var storedInitials =""; 
 function sendQuizResult(event){
 
     //will take in and user initials from end quiz page 
@@ -301,7 +292,9 @@ function calcFinalScore() {
 
 
 // button will send initials to local and build quizResult object
+var submitResultsButton = document.querySelector("#submit-results");
 submitResultsButton.addEventListener("click", buildNewScore);
+var userInitials = document.querySelector("#user-initials");
 var retrievedInitials;
 var retrievedScore;
 var quizResult;
@@ -366,3 +359,6 @@ function localToLeaderBoard() {
 
 
 // might need to have functionality with oldquizResult and newQuizResult
+// need to take locally stored data, place it into an array of objects
+// then have code that pushes a new object into that array
+// this new object should be created based off locally stored data that was taken
