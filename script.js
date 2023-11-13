@@ -341,10 +341,16 @@ var quizResultInitials;
 var quizResultScore;
 
 function localPrintToHiScorePage() {
-    quizResultInitials = JSON.parse(localStorage.getItem("leaderBoard")).initials;
-    quizResultScore = JSON.parse(localStorage.getItem("leaderBoard")).score;
-    console.log(quizResultInitials);
-    console.log(quizResultScore);
+    var renderBoardInitials;
+    var renderBoardScore;
+
+    renderBoardInitials = JSON.parse(localStorage.getItem("leaderBoard")).initials;
+    renderBoardScore = JSON.parse(localStorage.getItem("leaderBoard")).score;
+
+    quizResultInitials;
+    quizResultScore; 
+    console.log(renderBoardInitials);
+    console.log(renderBoardScore);
 
     document.querySelector("#leaderboard-user").textContent = "User: " + quizResultInitials;
     document.querySelector("#leaderboard-score").textContent = "Score: " + quizResultScore;
