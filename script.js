@@ -302,7 +302,10 @@ function calcFinalScore() {
 
 // button will send initials to local and build quizResult object
 submitResultsButton.addEventListener("click", buildNewScore);
+var retrievedInitials;
+var retrievedScore;
 var quizResult;
+
 function buildNewScore(event) {
     event.preventDefault();
     
@@ -310,17 +313,17 @@ function buildNewScore(event) {
     storedInitials = userInitials.value //value  = initials input from user
     localStorage.setItem("storedInitials", storedInitials)
 
-    var retrievedInitials;
-    var retrievedScore;
 
-     quizResult = [
-        {
+
+     quizResult = {
+        
          initials: retrievedInitials,
          score: retrievedScore,
         }
-    ]
+
     getFinalAndInitials()
-    editQuizResult() 
+    editQuizResult()
+    quizResultToLocal() 
 }
 
 // function will retrieve final score and user initials from local and set to variables
@@ -341,29 +344,30 @@ function buildNewScore(event) {
 
 // set to local storage
 
+function quizResultToLocal() {
+
+    localStorage.setItem("quizResult", JSON.stringify(quizResult));
+
+}
+
+
 //function to take local storage quizResult and create a leaderboard with the data
-var quizResultReturn = JSON.parse(localStorage.getItem("quizResult"));
-var leaderBoardReturn
 
-
-
+var leaderBoardReturn;
 
 //this will take both the userScore and storedInitials into an 
 // object named quizResult and the object into local storage
+// function createLeaderBoard() {
 
+//     if (quizResultReturn !== null) {
+//     var returnedInitials = quizResultReturn[0].initials; 
+//     var returnedScore = quizResultReturn[0].score;
 
+//     console.log(quizResultReturn);
+//     console.log(returnedInitials);
+//     console.log(returnedScore);
+//     }
 
-function createLeaderBoard() {
-    // will verify quizResultReturn from local storage & pass object into function
-    if (quizResultReturn !== null) {
-    var returnedInitials = quizResultReturn[0].initials; // returned initials from local storage
-    var returnedScore = quizResultReturn[0].score; // returned password from local storage
-
-    console.log(quizResultReturn);
-    console.log(returnedInitials);
-    console.log(returnedScore);
-    }
-
-    document.querySelector("#leaderboard-user").textContent = "User: " + returnedInitials; 
-    document.querySelector("#leaderboard-score").textContent = "Score: " + returnedScore;
-}
+//     document.querySelector("#leaderboard-user").textContent = "User: " + returnedInitials; 
+//     document.querySelector("#leaderboard-score").textContent = "Score: " + returnedScore;
+// }
