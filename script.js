@@ -257,7 +257,8 @@ function calcFinalScore() {
     finalScoreDisplay.textContent = "Final Score: " + finalScore;
     localStorage.setItem("finalScore", finalScore)
 }
-
+                                                                    //step 1 take in score & initials and send to local
+                                                                    //locals: finalScore & storedInitials
 // button will send initials to local and build quizResult object
 var submitResultsButton = document.querySelector("#submit-results");
 submitResultsButton.addEventListener("click", buildNewScore);
@@ -265,6 +266,7 @@ var userInitials = document.querySelector("#user-initials");
 var retrievedInitials;
 var retrievedScore;
 var quizResult;
+var leaderBoard;                                                            
 
 function buildNewScore(event) {
     event.preventDefault();
@@ -272,6 +274,12 @@ function buildNewScore(event) {
     //storedInitials can't be populated until user inputs value
     storedInitials = userInitials.value //value  = initials input from user
     localStorage.setItem("storedInitials", storedInitials)
+
+                                                                            //step 2: Build object array leaderBoard
+                                                                            //we will push new score objects into this
+                                                                            //every time quiz is attempted 
+
+     
 
 
 
