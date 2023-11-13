@@ -6,7 +6,7 @@
 
 :root {
       background: rgb(31, 99, 83);
-    --button-color: rgb(36, 36, 190);
+    --button-color: rgb(36, 157, 190);
     --button-text: white;
     --border-color:rgb(0, 60, 0);
     --background-comp: rgb(240, 226, 191);
@@ -265,6 +265,17 @@
     margin: 0 3%;
     padding: 0 2%;
   }
+
+   /* Hiscore Dropdown */
+  .dropdown-button {
+   border: none;
+  }
+
+  .dropdown-button:hover, .dropdown-button:focus {
+   background-color: var(--button-color);
+  }
+
+
 /*  HiScore Page -------------------------------------------------- */
 
 

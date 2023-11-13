@@ -362,7 +362,9 @@ function localPrintToHiScorePage() {
 
 //===================functions for HiScore dropdown =======================================================
 
-
+function dropdownFunction() {
+    //code will effect dropdownFunction
+}
 
 
 //===================functions for HiScore dropdown =======================================================
