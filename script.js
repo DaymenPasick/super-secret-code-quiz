@@ -274,6 +274,7 @@ function sendNewScore(event) {
     editQuizResult();               //function group for local storage score and leaderboard flow
     updateLeaderBoard()
     leaderBoardToLocal()
+    localPrintToHiScorePage()
 }
 //===============================functions will take in initial score and inputs and store in local =======================
 
@@ -340,8 +341,8 @@ var quizResultInitials;
 var quizResultScore;
 
 function localPrintToHiScorePage() {
-    quizResultInitials = JSON.parse(localStorage.getItem("quizResult")).initials;
-    quizResultScore = JSON.parse(localStorage.getItem("quizResult")).score;
+    quizResultInitials = JSON.parse(localStorage.getItem("leaderBoard")).initials;
+    quizResultScore = JSON.parse(localStorage.getItem("leaderBoard")).score;
     console.log(quizResultInitials);
     console.log(quizResultScore);
 
