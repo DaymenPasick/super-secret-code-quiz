@@ -323,7 +323,8 @@ function buildNewScore(event) {
 
     getFinalAndInitials()
     editQuizResult()
-    quizResultToLocal() 
+    quizResultToLocal()
+    localToLeaderBoard() 
 }
 
 // function will retrieve final score and user initials from local and set to variables
@@ -342,18 +343,20 @@ function buildNewScore(event) {
     console.log(quizResult);
  }
 
-// set to local storage
-
+// will send quizResult object to local storage
 function quizResultToLocal() {
-
     localStorage.setItem("quizResult", JSON.stringify(quizResult));
-
 }
 
 
 //function to take local storage quizResult and create a leaderboard with the data
+var quizResultInitials = JSON.parse(localStorage.getItem("quizResult")).initials;
+var quizResultScore = JSON.parse(localStorage.getItem("quizResult")).score;
 
-var leaderBoardReturn;
+function localToLeaderBoard() {
+    console.log("initial result: " + quizResultInitials);
+    console.log("score result: " + quizResultScore);
+}
 
 //this will take both the userScore and storedInitials into an 
 // object named quizResult and the object into local storage
