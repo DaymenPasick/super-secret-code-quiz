@@ -250,38 +250,13 @@ function clearLocal() {
 // ===================================================================== new format attempt
 
 
-// Build object
-var finalScore = 0; 
-var storedInitials =""; 
-function sendQuizResult(event){
-
-    //will take in and user initials from end quiz page 
-    event.preventDefault();
-    
-    console.log("User Initials: " + storedInitials);
-
-
-    quizResult = [
-        {
-            initials: storedInitials,
-            score: finalScore,
-        }
-    ]
-    localStorage.setItem("quizResult", JSON.stringify(quizResult));
-    createLeaderBoard(); // this will get returns from quizResult in local, make them variables, and populate them into hiscores page
-    displayScorePage(); //will pass user to HiScores page
-}
-
-
-
-//will calculate display user final score in quiz end page
+//will calculate display user final score in quiz end page-----send finalSCore to local
 var finalScoreDisplay = document.querySelector("#final-score-display");
 function calcFinalScore() {
     finalScore = userScore;
     finalScoreDisplay.textContent = "Final Score: " + finalScore;
     localStorage.setItem("finalScore", finalScore)
 }
-
 
 // button will send initials to local and build quizResult object
 var submitResultsButton = document.querySelector("#submit-results");
@@ -311,6 +286,31 @@ function buildNewScore(event) {
     quizResultToLocal()
     localToLeaderBoard() 
 }
+
+
+
+// Build object
+var finalScore = 0; 
+var storedInitials =""; 
+function sendQuizResult(event){
+
+    //will take in and user initials from end quiz page 
+    event.preventDefault();
+    
+    console.log("User Initials: " + storedInitials);
+
+
+    quizResult = [
+        {
+            initials: storedInitials,
+            score: finalScore,
+        }
+    ]
+    localStorage.setItem("quizResult", JSON.stringify(quizResult));
+    createLeaderBoard(); // this will get returns from quizResult in local, make them variables, and populate them into hiscores page
+    displayScorePage(); //will pass user to HiScores page
+}
+
 
 // function will retrieve final score and user initials from local and set to variables
  function getFinalAndInitials() {
