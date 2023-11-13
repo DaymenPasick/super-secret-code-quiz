@@ -323,20 +323,21 @@ function sendQuizResult(event){
 //will calculate display user final score in quiz end page
 var finalScoreDisplay = document.querySelector("#final-score-display");
 function calcFinalScore() {
-
     finalScore = userScore;
     finalScoreDisplay.textContent = "Final Score: " + finalScore;
+    localStorage.setItem("Final Score", finalScore)
 }
 
 
-// function to build quizResult object
-// submitResultsButton.addEventListener("click", sendQuizResult);
+// button will send initials to local and build quizResult object
+submitResultsButton.addEventListener("click", buildNewScore);
 
-
-function buildNewScore() {
+function buildNewScore(event) {
+    event.preventDefault();
     
-
+    //storedInitials can't be populated until user inputs value
     storedInitials = userInitials.value //value  = initials input from user
+    localStorage.setItem("storedInitials", storedInitials)
 
     var quizResult = [
         {
