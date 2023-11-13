@@ -320,3 +320,4 @@ init();
 // need to figure out exact placement of creating/storing local object and retreiving them
 
 
+// Need to follow build, get, push, set pattern
