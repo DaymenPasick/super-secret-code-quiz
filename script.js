@@ -363,3 +363,6 @@ function localToLeaderBoard() {
     document.querySelector("#leaderboard-score").textContent = "Score: " + quizResultScore;
     displayScorePage();
 }
+
+
+// might need to have functionality with oldquizResult and newQuizResult
