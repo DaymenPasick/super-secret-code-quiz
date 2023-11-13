@@ -286,8 +286,6 @@ submitResultsButton.addEventListener("click", sendNewScore);
 var userInitials = document.querySelector("#user-initials");
 var storedInitials =""; 
 
-
-
                                                                     //step 2 take in score & initials and send to local
                                                                     //locals: finalScore & storedInitials
 
@@ -301,41 +299,17 @@ function sendNewScore(event) {
 
 
 
-var retrievedInitials;
-var retrievedScore;
+
 // getFinalAndInitials()
 // editQuizResult()
 // quizResultToLocal()
 // localToLeaderBoard() 
 
 
-
-
-
-// Build object
-
-
-function sendQuizResult(event){
-
-    //will take in and user initials from end quiz page 
-    event.preventDefault();
-    
-    console.log("User Initials: " + storedInitials);
-
-
-    quizResult = [
-        {
-            initials: storedInitials,
-            score: finalScore,
-        }
-    ]
-    localStorage.setItem("quizResult", JSON.stringify(quizResult));
-    createLeaderBoard(); // this will get returns from quizResult in local, make them variables, and populate them into hiscores page
-    displayScorePage(); //will pass user to HiScores page
-}
-
-
 // function will retrieve final score and user initials from local and set to variables
+var retrievedInitials;
+var retrievedScore;
+
  function getFinalAndInitials() {
      retrievedInitials = localStorage.getItem("storedInitials");
      retrievedScore = localStorage.getItem("finalScore");
