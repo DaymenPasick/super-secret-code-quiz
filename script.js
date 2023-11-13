@@ -43,7 +43,7 @@ function displayQuizEnd(){
     quizPage.style.display = "none";
     endPage.style.display = null;
     scorePage.style.display = "none";
-    calcFinalScore();
+    sendFinalScore();
     
 }
 
@@ -255,54 +255,54 @@ var quizResult = {};
 var boardScore;
 var boardInit;                                                           
 
-                                                                          //step 1: Build object array leaderBoard
-                                                                            //we will push new score objects into this
-                                                                            //every time quiz is attempted 
-                                                                        //this will be our hiscores store in local
-
 //function will create a new array based off local returned object and push to leaderBoard
 function updateLeaderBoard() {
 
         quizResult.boardScore = "";
-        quizResult.boardInit = "";
+        quizResult.boardInit = "";                              //step 1: Build object array leaderBoard
+                                                                            //we will push new score objects into this
+                                                                            //every time quiz is attempted 
+                                                                        //this will be our hiscores store in local
                                                                      
          leaderBoard.push(quizResult)                                                               
 }
 
 
 
-//will calculate display user final score in quiz end page-----send finalSCore to local
+//will calculate display user final score in quiz end page----- will also send finalScore to local
 var finalScoreDisplay = document.querySelector("#final-score-display");
-function calcFinalScore() {
+var finalScore = 0; 
+
+function sendFinalScore() {
     finalScore = userScore;
     finalScoreDisplay.textContent = "Final Score: " + finalScore;
     localStorage.setItem("finalScore", finalScore)
 }
 
 
-// button will send initials to local and build quizResult object
+// button will send storedInitials to local
 var submitResultsButton = document.querySelector("#submit-results");
-submitResultsButton.addEventListener("click", buildNewScore);
+submitResultsButton.addEventListener("click", sendNewScore);
 var userInitials = document.querySelector("#user-initials");
+var storedInitials =""; 
 
-//for objects to push into leaderBoard array
 
-var retrievedInitials;
-var retrievedScore;
 
                                                                     //step 2 take in score & initials and send to local
                                                                     //locals: finalScore & storedInitials
 
-function buildNewScore(event) {
-    event.preventDefault();
-    
-    //storedInitials can't be populated until user inputs value
+function sendNewScore(event) {
+    event.preventDefault();  
     storedInitials = userInitials.value //value  = initials input from user
     localStorage.setItem("storedInitials", storedInitials)
-
-
 }
 
+
+
+
+
+var retrievedInitials;
+var retrievedScore;
 // getFinalAndInitials()
 // editQuizResult()
 // quizResultToLocal()
@@ -313,8 +313,8 @@ function buildNewScore(event) {
 
 
 // Build object
-var finalScore = 0; 
-var storedInitials =""; 
+
+
 function sendQuizResult(event){
 
     //will take in and user initials from end quiz page 
@@ -341,7 +341,7 @@ function sendQuizResult(event){
      retrievedScore = localStorage.getItem("finalScore");
      console.log("Initials from local: " + retrievedInitials);
      console.log("Final score from local: " + retrievedScore);
-
+                                                                // need to use these two functions for objectpush to array
  }
 
 // function will push score and initials into quizResult object
