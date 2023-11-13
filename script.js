@@ -252,8 +252,8 @@ function clearLocal() {
 
 // function will push score and initials into quizResult object (may be able to edit for LeaderBoard Object)
 function editQuizResult() {
-    quizResult.initials = retrievedInitials;
-    quizResult.score = retrievedScore;
+    quizResult.initials = initialsFromLocal;
+    quizResult.score = scoreFromLocal;
     console.log(quizResult);
  }
 
@@ -271,9 +271,12 @@ var boardInit;
 
 //function will create a new array based off local returned object and push to leaderBoard
 function updateLeaderBoard() {
+        
 
-        quizResult.boardScore = "";
-        quizResult.boardInit = "";                              //step 1: Build object array leaderBoard
+        boardScore ="";
+        boardInit = "";
+        // quizResult.boardScore = "";
+        // quizResult.boardInit = "";                              //step 1: Build object array leaderBoard
                                                                             //we will push new score objects into this
                                                                             //every time quiz is attempted 
                                                                         //this will be our hiscores store in local
@@ -313,14 +316,14 @@ function sendNewScore(event) {
 
 
 // function will retrieve final score and user initials from local and set to variables
-var retrievedInitials;
-var retrievedScore;
+var initialsFromLocal;
+var scoreFromLocal;
 
  function localGetFinalAndInitials() {
-     retrievedInitials = localStorage.getItem("storedInitials");
-     retrievedScore = localStorage.getItem("finalScore");
-     console.log("Initials from local: " + retrievedInitials);
-     console.log("Final score from local: " + retrievedScore);
+     initialsFromLocal = localStorage.getItem("storedInitials");
+     scoreFromLocal = localStorage.getItem("finalScore");
+     console.log("Initials from local: " + initialsFromLocal);
+     console.log("Final score from local: " + scoreFromLocal);
                                                                 // need to use these two functions for objectpush to array
  }
 
