@@ -356,5 +356,13 @@ function localPrintToHiScorePage() {
     document.querySelector("#leaderboard-score").textContent = "Score: " + quizResultScore;
     displayScorePage();
 }
-
 //===================functions will manage data coming out of leaderBoard Object =======================================================
+
+
+
+//===================functions for HiScore dropdown =======================================================
+
+
+
+
+//===================functions for HiScore dropdown =======================================================
