@@ -210,36 +210,6 @@ function userAnswer4(event) {
 
 
 
-//function to take local storage quizResult and create a leaderboard with the data
-var quizResultReturn = JSON.parse(localStorage.getItem("quizResult"));
-var leaderBoardReturn
-
-
-
-
-//this will take both the userScore and storedInitials into an 
-// object named quizResult and the object into local storage
-
-
-
-function createLeaderBoard() {
-    // will verify quizResultReturn from local storage & pass object into function
-    if (quizResultReturn !== null) {
-    var returnedInitials = quizResultReturn[0].initials; // returned initials from local storage
-    var returnedScore = quizResultReturn[0].score; // returned password from local storage
-
-    console.log(quizResultReturn);
-    console.log(returnedInitials);
-    console.log(returnedScore);
-    }
-
-    document.querySelector("#leaderboard-user").textContent = "User: " + returnedInitials; 
-    document.querySelector("#leaderboard-score").textContent = "Score: " + returnedScore;
-}
-
-
-
-
 //try again button in HiScores page. Clears user input and refreshes to start page
 var tryAgainButton = document.querySelector("#try-again");
 tryAgainButton.addEventListener("click", tryAgain);
@@ -319,6 +289,7 @@ function sendQuizResult(event){
     displayScorePage(); //will pass user to HiScores page
 }
 
+// ===================================================================== new format attempt
 
 //will calculate display user final score in quiz end page
 var finalScoreDisplay = document.querySelector("#final-score-display");
@@ -361,7 +332,7 @@ function buildNewScore(event) {
 
  }
 
-// push into array
+// function will push score and initials into quizResult object
  function editQuizResult() {
     quizResult.initials = retrievedInitials;
     quizResult.score = retrievedScore;
@@ -369,3 +340,30 @@ function buildNewScore(event) {
  }
 
 // set to local storage
+
+//function to take local storage quizResult and create a leaderboard with the data
+var quizResultReturn = JSON.parse(localStorage.getItem("quizResult"));
+var leaderBoardReturn
+
+
+
+
+//this will take both the userScore and storedInitials into an 
+// object named quizResult and the object into local storage
+
+
+
+function createLeaderBoard() {
+    // will verify quizResultReturn from local storage & pass object into function
+    if (quizResultReturn !== null) {
+    var returnedInitials = quizResultReturn[0].initials; // returned initials from local storage
+    var returnedScore = quizResultReturn[0].score; // returned password from local storage
+
+    console.log(quizResultReturn);
+    console.log(returnedInitials);
+    console.log(returnedScore);
+    }
+
+    document.querySelector("#leaderboard-user").textContent = "User: " + returnedInitials; 
+    document.querySelector("#leaderboard-score").textContent = "Score: " + returnedScore;
+}
