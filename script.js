@@ -307,7 +307,7 @@ function sendNewScore(event) {
     event.preventDefault();  
     storedInitials = userInitials.value //value  = initials input from user
     localStorage.setItem("storedInitials", storedInitials)
-    getFinalAndInitials()
+    localGetFinalAndInitials()
     editQuizResult()
 }
 
@@ -316,7 +316,7 @@ function sendNewScore(event) {
 var retrievedInitials;
 var retrievedScore;
 
- function getFinalAndInitials() {
+ function localGetFinalAndInitials() {
      retrievedInitials = localStorage.getItem("storedInitials");
      retrievedScore = localStorage.getItem("finalScore");
      console.log("Initials from local: " + retrievedInitials);
