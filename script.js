@@ -311,8 +311,6 @@ function sendNewScore(event) {
     editQuizResult()
 }
 
-// localToLeaderBoard() 
-
 
 // function will retrieve final score and user initials from local and set to variables
 var retrievedInitials;
@@ -328,11 +326,11 @@ var retrievedScore;
 
 
 
-//function to take local storage quizResult and create a leaderboard with the data
+//function to take local storage quizResult and create a leaderboard with the data (need to edit to take from LeaderBoard)
 var quizResultInitials;
 var quizResultScore;
 
-function localToLeaderBoard() {
+function localPrintToHiScorePage() {
     quizResultInitials = JSON.parse(localStorage.getItem("quizResult")).initials;
     quizResultScore = JSON.parse(localStorage.getItem("quizResult")).score;
     console.log(quizResultInitials);
@@ -343,8 +341,3 @@ function localToLeaderBoard() {
     displayScorePage();
 }
 
-
-// might need to have functionality with oldquizResult and newQuizResult
-// need to take locally stored data, place it into an array of objects
-// then have code that pushes a new object into that array
-// this new object should be created based off locally stored data that was taken
