@@ -13,12 +13,6 @@ var questionTwo = document.querySelector("#question-two");
 var questionThree = document.querySelector("#question-three");
 var questionFour = document.querySelector("#question-four");
 
-//will be given a value in quiz page, when user answers the corrosponding question
-var question1AnswerStatus;
-var question2AnswerStatus;
-var question3AnswerStatus;
-var question4AnswerStatus;
-
 
 
 
@@ -92,6 +86,25 @@ function displayQFour() {
 }
 
 
+// function and variables for countdown timer--- will send user to end quiz page when timer runs out -----------------------------------
+var quizTimer = document.querySelector(".time")
+var timeRemaining = 60;
+
+function cdTimer() {
+    var tInterval = setInterval(function(){
+        timeRemaining--;
+        quizTimer.textContent = "Time Remaining: " + timeRemaining;
+        
+        if(timeRemaining === 0) {
+            clearInterval(tInterval);
+            displayQuizEnd(); // will pass user to end quiz page
+        }
+
+
+    },1000) //this will set in miliseconds the timer interval
+}
+
+
 
 // functions to handle question answers from quiz pages--- answer 4 contains pass to end quiz page----------------------------
 //functions will add to user score or -10 seconds from timer based on user answer
@@ -99,11 +112,13 @@ var q1CorrectAnswer = document.querySelector("#q1-correct")
 var q2CorrectAnswer = document.querySelector("#q2-correct")
 var q3CorrectAnswer = document.querySelector("#q3-correct")
 var q4CorrectAnswer = document.querySelector("#q4-wrong") //this is different intentionally
+var userScore = 0;
 
 // question answer 1
 var q1Event = document.querySelector("#choice-one");
 q1Event.addEventListener("click", userAnswer);
-var userScore = 0;
+var question1AnswerStatus;
+
 
 function userAnswer(event) {
     event.preventDefault();
@@ -112,7 +127,7 @@ function userAnswer(event) {
 
     var answerResult = event.target.id;
 
-    if (answerResult === q1CorrectAnswer.id) { //will change gloabl var question1AnswerStatus 
+    if (answerResult === q1CorrectAnswer.id) { 
         question1AnswerStatus = "Correct";
         console.log(question1AnswerStatus);
         userScore = userScore + 15; // will add +15 to userScore
@@ -130,6 +145,7 @@ function userAnswer(event) {
 // question answer 2
 var q2Event = document.querySelector("#choice-two");
 q2Event.addEventListener("click", userAnswer2);
+var question2AnswerStatus;
 
 function userAnswer2(event) {
     event.preventDefault();
@@ -155,6 +171,7 @@ function userAnswer2(event) {
 // question answer 3
 var q3Event = document.querySelector("#choice-three");
 q3Event.addEventListener("click", userAnswer3);
+var question3AnswerStatus;
 
 function userAnswer3(event) {
     event.preventDefault();
@@ -181,6 +198,7 @@ function userAnswer3(event) {
 // question answer 4
 var q4Event = document.querySelector("#choice-four");
 q4Event.addEventListener("click", userAnswer4);
+var question4AnswerStatus;
 
 function userAnswer4(event) {
     event.preventDefault();
@@ -227,23 +245,7 @@ function clearLocal() {
 
 
 
-// function and variables for countdown timer--- will send user to end quiz page when timer runs out -----------------------------------
-var quizTimer = document.querySelector(".time")
-var timeRemaining = 60;
 
-function cdTimer() {
-    var tInterval = setInterval(function(){
-        timeRemaining--;
-        quizTimer.textContent = "Time Remaining: " + timeRemaining;
-        
-        if(timeRemaining === 0) {
-            clearInterval(tInterval);
-            displayQuizEnd(); // will pass user to end quiz page
-        }
-
-
-    },1000) //this will set in miliseconds the timer interval
-}
 
 function init() {
     displayStart();
