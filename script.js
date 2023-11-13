@@ -249,6 +249,20 @@ function clearLocal() {
 
 // ===================================================================== new format attempt
 
+
+// function will push score and initials into quizResult object (may be able to edit for LeaderBoard Object)
+function editQuizResult() {
+    quizResult.initials = retrievedInitials;
+    quizResult.score = retrievedScore;
+    console.log(quizResult);
+ }
+
+// will send quizResult object to local storage (may be able to edit for leaderBoard Object)
+function quizResultToLocal() {
+    localStorage.setItem("quizResult", JSON.stringify(quizResult));
+}
+
+
 //for Array leaderBoard that will serve as long-term store of scores in local
 var leaderBoard = [];
 var quizResult = {};
@@ -293,16 +307,10 @@ function sendNewScore(event) {
     event.preventDefault();  
     storedInitials = userInitials.value //value  = initials input from user
     localStorage.setItem("storedInitials", storedInitials)
+    getFinalAndInitials()
+    editQuizResult()
 }
 
-
-
-
-
-
-// getFinalAndInitials()
-// editQuizResult()
-// quizResultToLocal()
 // localToLeaderBoard() 
 
 
@@ -318,17 +326,6 @@ var retrievedScore;
                                                                 // need to use these two functions for objectpush to array
  }
 
-// function will push score and initials into quizResult object
- function editQuizResult() {
-    quizResult.initials = retrievedInitials;
-    quizResult.score = retrievedScore;
-    console.log(quizResult);
- }
-
-// will send quizResult object to local storage
-function quizResultToLocal() {
-    localStorage.setItem("quizResult", JSON.stringify(quizResult));
-}
 
 
 //function to take local storage quizResult and create a leaderboard with the data
