@@ -246,7 +246,7 @@ function clearLocal() {
 }
 
 
-//====================================== functions will take in initial score and inputs and store in local =======================
+//===============================functions will take in initials input/quiz score and store in local =======================
 
 
 //will calculate display user final score in quiz end page----- will also send finalScore to local
@@ -272,17 +272,19 @@ function sendNewScore(event) {
     storedInitials = userInitials.value //value  = initials input from user
     localStorage.setItem("storedInitials", storedInitials)
     localGetFinalAndInitials()
-    editQuizResult()
+    editQuizResult();
+    updateLeaderBoard()
     leaderBoardToLocal()
 }
 
 
-//====================================== functions will take in initial score and inputs and store in local =======================
+//===============================functions will take in initial score and inputs and store in local =======================
 
 
 
 
-//====================================== functions will build leaderBoard Object ==================================================
+
+//==============================functions will build/manage leaderBoard Array ==================================================
 
 //for Array leaderBoard that will serve as long-term store of scores in local
 var leaderBoard = [];
@@ -294,8 +296,8 @@ var boardInit;
 function updateLeaderBoard() {
         
 
-        boardScore ="";
-        boardInit = "";
+        // boardScore ="";
+        // boardInit = "";
         // quizResult.boardScore = "";
         // quizResult.boardInit = "";                              //step 1: Build object array leaderBoard
                                                                             //we will push new score objects into this
@@ -305,23 +307,14 @@ function updateLeaderBoard() {
          leaderBoard.push(quizResult)                                                               
 }
 
-//====================================== functions will build leaderBoard Object ==================================================
+//================================functions will build/manage leaderBoard Array ==================================================
 
 
 
-// function will push score and initials into quizResult object (may be able to edit for LeaderBoard Object)
-function editQuizResult() {
-    quizResult.initials = initialsFromLocal;
-    quizResult.score = scoreFromLocal;
-    console.log(quizResult);
- }
-
-// will send leaderBoard array to local storage (still need to test)
-function leaderBoardToLocal() {
-    localStorage.setItem("leaderBoard", JSON.stringify(leaderBoard));
-}
 
 
+
+//================================functions will manage data going into leaderBoard Array =============================================
 
 // function will retrieve final score and user initials from local and set to variables
 var initialsFromLocal;
@@ -336,6 +329,25 @@ var scoreFromLocal;
  }
 
 
+ // function will push score and initials into quizResult object 
+function editQuizResult() {
+    quizResult.initials = initialsFromLocal;
+    quizResult.score = scoreFromLocal;
+    console.log(quizResult)
+ }
+
+
+
+
+//================================functions will manage data going into leaderBoard Object =============================================
+
+
+
+
+// will send leaderBoard array to local storage (still need to test)
+function leaderBoardToLocal() {
+    localStorage.setItem("leaderBoard", JSON.stringify(leaderBoard));
+}
 
 
 
