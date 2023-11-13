@@ -358,21 +358,8 @@ function localToLeaderBoard() {
     quizResultScore = JSON.parse(localStorage.getItem("quizResult")).score;
     console.log(quizResultInitials);
     console.log(quizResultScore);
+
+    document.querySelector("#leaderboard-user").textContent = "User: " + quizResultInitials;
+    document.querySelector("#leaderboard-score").textContent = "Score: " + quizResultScore;
+    displayScorePage();
 }
-
-//this will take both the userScore and storedInitials into an 
-// object named quizResult and the object into local storage
-// function createLeaderBoard() {
-
-//     if (quizResultReturn !== null) {
-//     var returnedInitials = quizResultReturn[0].initials; 
-//     var returnedScore = quizResultReturn[0].score;
-
-//     console.log(quizResultReturn);
-//     console.log(returnedInitials);
-//     console.log(returnedScore);
-//     }
-
-//     document.querySelector("#leaderboard-user").textContent = "User: " + returnedInitials; 
-//     document.querySelector("#leaderboard-score").textContent = "Score: " + returnedScore;
-// }
