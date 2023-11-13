@@ -251,12 +251,14 @@ function clearLocal() {
 
 //for Array leaderBoard that will serve as long-term store of scores in local
 var leaderBoard = [];
+var quizResult = {};
 var boardScore;
 var boardInit;                                                           
 
                                                                           //step 1: Build object array leaderBoard
                                                                             //we will push new score objects into this
                                                                             //every time quiz is attempted 
+                                                                        //this will be our hiscores store in local
 
 //function will create a new array based off local returned object and push to leaderBoard
 function updateLeaderBoard() {
@@ -284,7 +286,7 @@ submitResultsButton.addEventListener("click", buildNewScore);
 var userInitials = document.querySelector("#user-initials");
 
 //for objects to push into leaderBoard array
-var quizResult;
+
 var retrievedInitials;
 var retrievedScore;
 
@@ -298,22 +300,13 @@ function buildNewScore(event) {
     storedInitials = userInitials.value //value  = initials input from user
     localStorage.setItem("storedInitials", storedInitials)
 
-  
 
-
-     quizResult = {
-        
-         initials: retrievedInitials,
-         score: retrievedScore,
-        }
-
-    getFinalAndInitials()
-    editQuizResult()
-    quizResultToLocal()
-    localToLeaderBoard() 
 }
 
-
+// getFinalAndInitials()
+// editQuizResult()
+// quizResultToLocal()
+// localToLeaderBoard() 
 
 
 
