@@ -1,6 +1,5 @@
 // JavaScript sheet
 
-
 //for start, quiz, quiz-end, and HiScore pages
 var startPage = document.querySelector(".startPage");
 var quizPage = document.querySelector(".quizPage");
@@ -13,8 +12,11 @@ var questionTwo = document.querySelector("#question-two");
 var questionThree = document.querySelector("#question-three");
 var questionFour = document.querySelector("#question-four");
 
-
-
+//will ensure start page is active when program initializes
+function init() {
+    displayStart();
+}
+init();
 
 // functions to toggle display of each "page"-- displayQuiz contains timer start & pass to question1 ---------------------------
 var startButton = document.querySelector("#start-button");
@@ -154,7 +156,7 @@ function userAnswer2(event) {
 
     var answerResult = event.target.id;
 
-    if (answerResult === q2CorrectAnswer.id) { //will change gloabl var question2AnswerStatus 
+    if (answerResult === q2CorrectAnswer.id) { 
         question2AnswerStatus = "Correct";
         console.log(question2AnswerStatus);
         userScore = userScore + 15; // will add +15 to userScore
@@ -180,7 +182,7 @@ function userAnswer3(event) {
 
     var answerResult = event.target.id;
 
-    if (answerResult === q3CorrectAnswer.id) { //will change gloabl var question3AnswerStatus 
+    if (answerResult === q3CorrectAnswer.id) { 
         question3AnswerStatus = "Correct";
         console.log(question3AnswerStatus);
         userScore = userScore + 15; // will add +15 to userScore
@@ -207,7 +209,7 @@ function userAnswer4(event) {
 
     var answerResult = event.target.id;
 
-    if (answerResult === q4CorrectAnswer.id) { //will change gloabl var question1AnswerStatus 
+    if (answerResult === q4CorrectAnswer.id) { 
         question4AnswerStatus = "Wrong";
         console.log(question4AnswerStatus);
         timeRemaining = timeRemaining - 10; //wrong = -10 seconds from timer
@@ -245,19 +247,7 @@ function clearLocal() {
 
 
 
-
-
-function init() {
-    displayStart();
-}
-init();
-
-
-// Need to way to display answer Corrent/Incorrect answers 
-// 3) while this action triggers a change to next question, it should also display the selected answers wrong/correct status
-// 5) need a way to delay the switch to the next question to user to see the wrong/correct alert
-// 6) need as way to display this wrong/correct alert upon clicking
-
+// ===================================================================== new format attempt
 
 
 // Build object
@@ -282,7 +272,7 @@ function sendQuizResult(event){
     displayScorePage(); //will pass user to HiScores page
 }
 
-// ===================================================================== new format attempt
+
 
 //will calculate display user final score in quiz end page
 var finalScoreDisplay = document.querySelector("#final-score-display");
