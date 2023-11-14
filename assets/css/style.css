@@ -122,6 +122,12 @@
     border-bottom-right-radius: 5%;
  }
 
+ section div ol li:hover {
+   border-top: 2px solid var(--border-color);
+   border-right: 2px solid var(--border-color);
+   border-bottom: 2px solid var(--border-color);
+
+ }
  section h2 {
     padding-left: 6%;
     font-size: var(--h2-text-size);
@@ -147,6 +153,10 @@
    color: var(--p-text-size);
    font-weight:530;
   }
+
+  /* .answer-choices li a:hover {
+   border-top: 2px solid color var(--border-color);
+  } */
 
 
  #question-one {
