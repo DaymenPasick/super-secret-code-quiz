@@ -386,21 +386,13 @@ function dropdownFunction() {
 }
 
 //will grab Hiscore info and populate it into dropdown
-var dropDownGenerated;
+
 
 function printToDropDown () {
         var newDropDownItem = document.getElementById("dropdown-content-id")
         .appendChild(document.createElement("a"));
 
-        dropDownGenerated = newDropDownItem;
-
         newDropDownItem.textContent = userNumber + ": User: " + quizResultInitials + " Score: " + quizResultScore;
-}
-
-//will remove <a> child elements created in printToDropDown
-function clearHiScoreDropDown () {
-        document.getElementById("dropdown-content-id")
-        .removeChild(document.getElementById("dropdown-content")).lastChild;
 }
 
 // will create user number for dropdown using an iteration loop
