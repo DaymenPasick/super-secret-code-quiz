@@ -244,13 +244,14 @@ function tryAgain(event) {
     displayQuiz();
 }
 
-// clear leaderboard button
-var clearLeaderButton = document.querySelector("#clear-leaderboard");
-clearLeaderButton.addEventListener("click", clearLocal);
+// (commented out because might be useful in the future)clear leaderboard button 
+// var clearLeaderButton = document.querySelector("#clear-leaderboard");
+// clearLeaderButton.addEventListener("click", clearLocal);
 
-function clearLocal() {
-    localStorage.clear();
-}
+// function clearLocal() {
+//     localStorage.clear();
+
+// }
 
 
 //===============================functions will take in initials input/quiz score and store in local =======================
@@ -385,12 +386,21 @@ function dropdownFunction() {
 }
 
 //will grab Hiscore info and populate it into dropdown
+var dropDownGenerated;
+
 function printToDropDown () {
         var newDropDownItem = document.getElementById("dropdown-content-id")
         .appendChild(document.createElement("a"));
 
-        newDropDownItem.textContent = userNumber + ": User: " + quizResultInitials + " Score: " + quizResultScore;
+        dropDownGenerated = newDropDownItem;
 
+        newDropDownItem.textContent = userNumber + ": User: " + quizResultInitials + " Score: " + quizResultScore;
+}
+
+//will remove <a> child elements created in printToDropDown
+function clearHiScoreDropDown () {
+        document.getElementById("dropdown-content-id")
+        .removeChild(document.getElementById("dropdown-content")).lastChild;
 }
 
 // will create user number for dropdown using an iteration loop
