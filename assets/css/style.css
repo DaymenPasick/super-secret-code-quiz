@@ -6,7 +6,8 @@
 
 :root {
       background: rgb(31, 99, 83);
-    --button-color: rgb(36, 157, 190);
+    --button-color: rgb(0, 60, 0);
+    --button-hover: rgb(31, 99, 83);
     --button-text: white;
     --border-color:rgb(0, 60, 0);
     --background-comp: rgb(240, 226, 191);
@@ -91,6 +92,13 @@
 
  header div button {
     padding: 1% 5%;
+    border-color: var(--button-hover);
+    background-color: var(--button-color);
+    color: var(--button-text);
+ }
+
+ header div button:hover {
+     background-color: var(--button-hover);
  }
  /*  Start Page -------------------------------------------------- */
 
@@ -211,7 +219,17 @@
  form #submit-score {
     display: flex;
     justify-content: flex-end;
-    margin-left: 2%;
+    margin-left: 2%;  
+ }
+
+ #submit-results {
+   border-color: var(--button-hover);
+   background-color: var(--button-color);
+   color: var(--button-text);
+ }
+
+ #submit-results:hover {
+   background-color: var(--button-hover);
  }
 
  summary form {
@@ -264,15 +282,24 @@
   aside button {
     margin: 0 3%;
     padding: 0 2%;
+    border-color: var(--button-hover);
+    background-color: var(--button-color);
+    color: var(--button-text);
+  }
+
+  aside button:hover {
+   background-color: var(--button-hover);
   }
 
    /* Hiscore Dropdown */
   .dropdown-button {
-   border: none;
+   border-color: var(--button-hover);
+   background-color: var(--button-color);
+   color: var(--button-text);
   }
 
   .dropdown-button:hover, .dropdown-button:focus {
-   background-color: var(--button-color);
+   background-color: var(--button-hover);
   }
 
 
