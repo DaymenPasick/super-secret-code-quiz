@@ -275,6 +275,7 @@ function sendNewScore(event) {
     updateLeaderBoard()
     leaderBoardToLocal()
     localPrintToHiScorePage()
+    printToDropDown ()
 }
 //===============================functions will take in initial score and inputs and store in local =======================
 
@@ -365,7 +366,16 @@ function localPrintToHiScorePage() {
 //will toggle Hiscore button css propert .show
 function dropdownFunction() {
     document.getElementById("dropdown-content-id").classList.toggle("show");
+    
 }
 
+//need function that will grab Hiscore info and populate it into dropdown
+function printToDropDown () {
+        var newDropDownItem = document.getElementById("dropdown-content-id")
+        .appendChild(document.createElement("a"));
+
+        newDropDownItem.textContent = "heyyy";
+
+}
 
 //===================functions for HiScore dropdown =======================================================
