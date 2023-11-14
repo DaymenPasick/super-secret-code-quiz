@@ -303,6 +303,19 @@
   }
 
 
+  .dropdown {
+   display: flex;
+   position: relative;
+  }
+
+  .dropdown-content-id {
+   /* display: none; */
+   position: absolute;
+   background-color: var(--button-hover);
+   width: auto;
+   z-index: 1;
+  }
+
 /*  HiScore Page -------------------------------------------------- */
 
 
