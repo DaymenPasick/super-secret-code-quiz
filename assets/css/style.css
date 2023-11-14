@@ -316,6 +316,19 @@
    z-index: 1;
   }
 
+  .dropdown-content-id a {
+   color: black;
+   text-decoration: none;
+   display: block;
+  }
+
+  .dropdown-content-id a:hover {
+   background-color: purple;
+  }
+  
+  .show {
+   display: block;
+  }
 /*  HiScore Page -------------------------------------------------- */
 
 
