@@ -406,15 +406,17 @@ function findingLeaderBoardValues() {
 }
 
 // view highschores at start
-var viewHighScoresButton = document.querySelector("#view-highscores")
+var viewHighScoresButton = document.querySelector("#view-hiscores")
 viewHighScoresButton.addEventListener("click", clickViewHSButton);
 
 function clickViewHSButton(event) {
-    if (timeRemaining != 0 || timeRemaining != 60) {
-        event.preventDefault;
+    if (timeRemaining === 0 || timeRemaining === 60) {
+        displayScorePage();
+        event.preventDefault();
     } else { 
-    event.preventDefault;
-    displayScorePage();
+    event.preventDefault();
+    alert("please finish the quiz first");
+    
     }
 }
 
