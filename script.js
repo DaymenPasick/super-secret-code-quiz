@@ -94,7 +94,7 @@ function displayQFour() {
 // function and variables for countdown timer--- will send user to end quiz page when timer runs out -----------------------------------
 var quizTimer = document.querySelector(".time")
 var timeRemaining = 60;
-// var tInterval;
+
 
 function cdTimer() {
     var tInterval = setInterval(function(){
@@ -244,15 +244,6 @@ function tryAgain(event) {
     displayQuiz();
 }
 
-// (commented out because might be useful in the future)clear leaderboard button 
-// var clearLeaderButton = document.querySelector("#clear-leaderboard");
-// clearLeaderButton.addEventListener("click", clearLocal);
-
-// function clearLocal() {
-//     localStorage.clear();
-
-// }
-
 
 //===============================functions will take in initials input/quiz score and store in local =======================
 
@@ -385,9 +376,13 @@ function dropdownFunction() {
     
 }
 
+
+function dropdownFunction2() {
+    document.getElementById("start-dropdown-content-id").classList.toggle("show");
+    console.log("working")
+}
+
 //will grab Hiscore info and populate it into dropdown
-
-
 function printToDropDown () {
         var newDropDownItem = document.getElementById("dropdown-content-id")
         .appendChild(document.createElement("a"));
@@ -406,9 +401,7 @@ function findingLeaderBoardValues() {
 }
 
 
-function dropdownFunctionStartPage() {
-    document.getElementById("start-dropdown-content-id").classList.toggle("show");
-}
+
 
 //===================functions for HiScore dropdown =======================================================
 
