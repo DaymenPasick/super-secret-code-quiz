@@ -278,9 +278,9 @@ function sendNewScore(event) {
     storedInitials = userInitials.value //value  = initials input from user
     localStorage.setItem("storedInitials", storedInitials);
     localGetFinalAndInitials();
-    editQuizResult();               //function group for local storage score and leaderboard flow
+    editQuizResult();               
     updateLeaderBoard();
-    leaderBoardToLocal();
+    leaderBoardToLocal();           //function group for local storage score and leaderboard flow
     localPrintToHiScorePage();
     findingLeaderBoardValues()
     printToDropDown ();
@@ -312,7 +312,6 @@ function updateLeaderBoard() {
 
 
 
-
 //================================functions will manage data going into leaderBoard Array =============================================
 
 // function will retrieve final score and user initials from local and set to variables
@@ -336,6 +335,9 @@ function editQuizResult() {
  }
 
 //================================functions will manage data going into leaderBoard Object =============================================
+
+
+
 
 
 //===================functions will manage data coming out of leaderBoard Object =======================================================
@@ -372,6 +374,8 @@ function localPrintToHiScorePage() {
 
 
 
+
+
 //===================functions for HiScore dropdown =======================================================
 
 //will toggle Hiscore button css propert .show
@@ -380,7 +384,7 @@ function dropdownFunction() {
     
 }
 
-//function that will grab Hiscore info and populate it into dropdown
+//will grab Hiscore info and populate it into dropdown
 function printToDropDown () {
         var newDropDownItem = document.getElementById("dropdown-content-id")
         .appendChild(document.createElement("a"));
@@ -389,7 +393,7 @@ function printToDropDown () {
 
 }
 
-    // test loop for leaderboard to dropdown
+// will create user number for dropdown using an iteration loop
 var userNumber = 0;
 function findingLeaderBoardValues() {
     userNumber = 0;
@@ -397,9 +401,5 @@ function findingLeaderBoardValues() {
         userNumber = i + 1;
         console.log (userNumber);
     }
-    
-
 }
-
-
 //===================functions for HiScore dropdown =======================================================
