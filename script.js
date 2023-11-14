@@ -362,8 +362,9 @@ function localPrintToHiScorePage() {
 
 //===================functions for HiScore dropdown =======================================================
 
+//will toggle Hiscore button css propert .show
 function dropdownFunction() {
-    //code will effect dropdownFunction
+    document.getElementById("dropdown-content-id").classList.toggle("show");
 }
 
 

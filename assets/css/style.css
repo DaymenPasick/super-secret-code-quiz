@@ -308,21 +308,21 @@
    position: relative;
   }
 
-  .dropdown-content-id {
-   /* display: none; */
+  .dropdown-content-class {
+   display: none;
    position: absolute;
    background-color: var(--button-hover);
    width: auto;
    z-index: 1;
   }
 
-  .dropdown-content-id a {
+  .dropdown-content-classa {
    color: black;
    text-decoration: none;
    display: block;
   }
 
-  .dropdown-content-id a:hover {
+  .dropdown-content-class a:hover {
    background-color: purple;
   }
   
