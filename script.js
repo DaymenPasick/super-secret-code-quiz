@@ -405,21 +405,10 @@ function findingLeaderBoardValues() {
     }
 }
 
-// view highschores at start
-var viewHighScoresButton = document.querySelector("#view-hiscores")
-viewHighScoresButton.addEventListener("click", clickViewHSButton);
 
-function clickViewHSButton(event) {
-    if (timeRemaining === 0 || timeRemaining === 60) {
-        displayScorePage();
-        event.preventDefault();
-    } else { 
-    event.preventDefault();
-    alert("please finish the quiz first");
-    
-    }
+function dropdownFunctionStartPage() {
+    document.getElementById("start-dropdown-content-id").classList.toggle("show");
 }
-
 
 //===================functions for HiScore dropdown =======================================================
 

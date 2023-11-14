@@ -162,9 +162,6 @@
    font-weight:530;
   }
 
-  /* .answer-choices li a:hover {
-   border-top: 2px solid color var(--border-color);
-  } */
 
 
  #question-one {
@@ -312,7 +309,7 @@
    background-color: var(--button-hover);
   }
 
-   /* Hiscore Dropdown */
+   /* Hiscore Dropdowns */
   .dropdown-button {
    border-color: var(--button-hover);
    background-color: var(--button-color);
