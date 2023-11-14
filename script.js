@@ -106,6 +106,8 @@ function cdTimer() {
             displayQuizEnd(); // will pass user to end quiz page
         }
 
+    
+
 
 
 
