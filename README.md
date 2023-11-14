@@ -19,7 +19,7 @@
 ## Usage
 
 Here is the link to the live quiz website: 
-https://daymenpasick.github.io/css-portfolio-challenge/
+https://daymenpasick.github.io/super-secret-code-quiz/
 
 
 ## License
