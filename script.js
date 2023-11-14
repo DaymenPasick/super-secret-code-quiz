@@ -15,12 +15,15 @@ var questionFour = document.querySelector("#question-four");
 //will ensure start page is active when program initializes
 function init() {
     displayStart();
+    
 }
 init();
 
 // functions to toggle display of each "page"-- displayQuiz contains timer start & pass to question1 ---------------------------
 var startButton = document.querySelector("#start-button");
 startButton.addEventListener("click", displayQuiz);
+startButton.addEventListener("click", cdTimer);
+
 
 function displayStart(){
     startPage.style.display = null;
@@ -34,7 +37,7 @@ function displayQuiz(){
     quizPage.style.display = null;
     endPage.style.display = "none";
     scorePage.style.display = "none";
-    cdTimer(); //will trigger timer to start
+     //will trigger timer to start
     displayQOne()//will toggle question 1 page
 }
 
@@ -91,16 +94,19 @@ function displayQFour() {
 // function and variables for countdown timer--- will send user to end quiz page when timer runs out -----------------------------------
 var quizTimer = document.querySelector(".time")
 var timeRemaining = 60;
+// var tInterval;
 
 function cdTimer() {
     var tInterval = setInterval(function(){
         timeRemaining--;
         quizTimer.textContent = "Time Remaining: " + timeRemaining;
         
-        if(timeRemaining === 0) {
+        if(timeRemaining <= 0) {
             clearInterval(tInterval);
             displayQuizEnd(); // will pass user to end quiz page
         }
+
+
 
 
     },1000) //this will set in miliseconds the timer interval
@@ -230,11 +236,10 @@ var tryAgainButton = document.querySelector("#try-again");
 tryAgainButton.addEventListener("click", tryAgain);
 
 function tryAgain(event) {
-    location.reload(true); //will reload start page and clear old settings while clearing user input
-    startPage.style.display = null;
-    quizPage.style.display = "none";
-    endPage.style.display = "none";
-    scorePage.style.display = "none";
+    event.preventDefault;
+    userScore = 0;
+    timeRemaining = 60;
+    displayQuiz();
 }
 
 // clear leaderboard button
@@ -269,13 +274,13 @@ var storedInitials ="";
 function sendNewScore(event) {
     event.preventDefault();  
     storedInitials = userInitials.value //value  = initials input from user
-    localStorage.setItem("storedInitials", storedInitials)
-    localGetFinalAndInitials()
+    localStorage.setItem("storedInitials", storedInitials);
+    localGetFinalAndInitials();
     editQuizResult();               //function group for local storage score and leaderboard flow
-    updateLeaderBoard()
-    leaderBoardToLocal()
-    localPrintToHiScorePage()
-    printToDropDown ()
+    updateLeaderBoard();
+    leaderBoardToLocal();
+    localPrintToHiScorePage();
+
 }
 //===============================functions will take in initial score and inputs and store in local =======================
 
@@ -294,7 +299,7 @@ var boardInit;
 //function will create a new object based off local storage scores and push to leaderBoard array
 function updateLeaderBoard() {
 
-         leaderBoard.push(quizResult)                                                               
+         leaderBoard.push(quizResult);                                                               
 }
 //================================function will build/manage leaderBoard Array ==================================================
 
@@ -322,7 +327,7 @@ var scoreFromLocal;
 function editQuizResult() {
     quizResult.initials = initialsFromLocal;
     quizResult.score = scoreFromLocal;
-    // console.log(quizResult)
+    console.log(quizResult)
  }
 
 //================================functions will manage data going into leaderBoard Object =============================================
@@ -356,6 +361,7 @@ function localPrintToHiScorePage() {
     document.querySelector("#leaderboard-user").textContent = "User: " + quizResultInitials;
     document.querySelector("#leaderboard-score").textContent = "Score: " + quizResultScore;
     displayScorePage();
+    console.log(leaderBoard);
 }
 //===================functions will manage data coming out of leaderBoard Object =======================================================
 
@@ -364,20 +370,30 @@ function localPrintToHiScorePage() {
 //===================functions for HiScore dropdown =======================================================
 
 //will toggle Hiscore button css propert .show
-function dropdownFunction() {
-    document.getElementById("dropdown-content-id").classList.toggle("show");
+// function dropdownFunction() {
+//     document.getElementById("dropdown-content-id").classList.toggle("show");
     
-}
+// }
 
 //need function that will grab Hiscore info and populate it into dropdown
-function printToDropDown () {
-        var newDropDownItem = document.getElementById("dropdown-content-id")
-        .appendChild(document.createElement("a"));
+// function printToDropDown () {
+//         var newDropDownItem = document.getElementById("dropdown-content-id")
+//         .appendChild(document.createElement("a"));
 
-        newDropDownItem.textContent ="User: " + quizResultInitials + " Score: " + quizResultScore;
-        
+//         newDropDownItem.textContent ="User: " + quizResultInitials + " Score: " + quizResultScore;
 
+// }
 
-}
+    // test loop for leaderboard to dropdown
+
+// function findingLeaderBoardValues() {
+
+//     for (i = 0; i < leaderBoard.length; i++ ) {
+//         console.log ("objects in leaderboard");
+//     }
+    
+
+// }
+
 
 //===================functions for HiScore dropdown =======================================================
