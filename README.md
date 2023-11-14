@@ -7,13 +7,18 @@
 
 ## Screenshots
 
-- Image of my CSS portfolio
+- Image of my JavaScript Quiz main page
 
-![completed product website screenshot](./assets/images/Daymens-CSS-Portfolio.png)
+![completed product website screenshot](./assets/imgs/jsQuizmainpage.png)
+
+
+ - Image of Hiscore page
+
+![completed product website screenshot](./assets/imgs/jsQuizhiscorepage.png)
 
 ## Usage
 
-Please click the link to check out my portfolio: 
+Here is the link to the live quiz website: 
 https://daymenpasick.github.io/css-portfolio-challenge/
 
 
