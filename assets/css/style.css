@@ -90,6 +90,7 @@
     justify-content: center;
     font-size: var(--p-text-size);
     margin: 3% 0;
+    font-weight: 525;
  }
 
  header div {

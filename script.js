@@ -103,12 +103,9 @@ function cdTimer() {
         
         if(timeRemaining <= 0) {
             clearInterval(tInterval);
+            timeRemaining = 0;
             displayQuizEnd(); // will pass user to end quiz page
         }
-
-    
-
-
 
 
     },1000) //this will set in miliseconds the timer interval
