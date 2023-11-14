@@ -404,4 +404,20 @@ function findingLeaderBoardValues() {
         console.log (userNumber);
     }
 }
+
+// view highschores at start
+var viewHighScoresButton = document.querySelector("#view-highscores")
+viewHighScoresButton.addEventListener("click", clickViewHSButton);
+
+function clickViewHSButton(event) {
+    if (timeRemaining != 0 || timeRemaining != 60) {
+        event.preventDefault;
+    } else { 
+    event.preventDefault;
+    displayScorePage();
+    }
+}
+
+
 //===================functions for HiScore dropdown =======================================================
+
