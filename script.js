@@ -374,7 +374,9 @@ function printToDropDown () {
         var newDropDownItem = document.getElementById("dropdown-content-id")
         .appendChild(document.createElement("a"));
 
-        newDropDownItem.textContent = "heyyy";
+        newDropDownItem.textContent ="User: " + quizResultInitials + " Score: " + quizResultScore;
+        
+
 
 }
 
