@@ -282,8 +282,9 @@ function sendNewScore(event) {
     updateLeaderBoard();
     leaderBoardToLocal();
     localPrintToHiScorePage();
-    printToDropDown ();
     findingLeaderBoardValues()
+    printToDropDown ();
+    
 
 }
 //===============================functions will take in initial score and inputs and store in local =======================
@@ -384,16 +385,17 @@ function printToDropDown () {
         var newDropDownItem = document.getElementById("dropdown-content-id")
         .appendChild(document.createElement("a"));
 
-        newDropDownItem.textContent ="User: " + quizResultInitials + " Score: " + quizResultScore;
+        newDropDownItem.textContent = userNumber + ": User: " + quizResultInitials + " Score: " + quizResultScore;
 
 }
 
     // test loop for leaderboard to dropdown
-
+var userNumber = 0;
 function findingLeaderBoardValues() {
-
+    userNumber = 0;
     for (i = 0; i < leaderBoard.length; i++ ) {
-        console.log ("objects in leaderboard");
+        userNumber = i + 1;
+        console.log (userNumber);
     }
     
 
