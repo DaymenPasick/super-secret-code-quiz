@@ -282,6 +282,8 @@ function sendNewScore(event) {
     updateLeaderBoard();
     leaderBoardToLocal();
     localPrintToHiScorePage();
+    printToDropDown ();
+    findingLeaderBoardValues()
 
 }
 //===============================functions will take in initial score and inputs and store in local =======================
@@ -372,30 +374,30 @@ function localPrintToHiScorePage() {
 //===================functions for HiScore dropdown =======================================================
 
 //will toggle Hiscore button css propert .show
-// function dropdownFunction() {
-//     document.getElementById("dropdown-content-id").classList.toggle("show");
+function dropdownFunction() {
+    document.getElementById("dropdown-content-id").classList.toggle("show");
     
-// }
+}
 
-//need function that will grab Hiscore info and populate it into dropdown
-// function printToDropDown () {
-//         var newDropDownItem = document.getElementById("dropdown-content-id")
-//         .appendChild(document.createElement("a"));
+//function that will grab Hiscore info and populate it into dropdown
+function printToDropDown () {
+        var newDropDownItem = document.getElementById("dropdown-content-id")
+        .appendChild(document.createElement("a"));
 
-//         newDropDownItem.textContent ="User: " + quizResultInitials + " Score: " + quizResultScore;
+        newDropDownItem.textContent ="User: " + quizResultInitials + " Score: " + quizResultScore;
 
-// }
+}
 
     // test loop for leaderboard to dropdown
 
-// function findingLeaderBoardValues() {
+function findingLeaderBoardValues() {
 
-//     for (i = 0; i < leaderBoard.length; i++ ) {
-//         console.log ("objects in leaderboard");
-//     }
+    for (i = 0; i < leaderBoard.length; i++ ) {
+        console.log ("objects in leaderboard");
+    }
     
 
-// }
+}
 
 
 //===================functions for HiScore dropdown =======================================================
