@@ -311,15 +311,18 @@
   .dropdown-content-class {
    display: none;
    position: absolute;
-   background-color: var(--button-hover);
+   background-color: rgb(133, 186, 133);
+   margin-top: 19px;
    width: auto;
    z-index: 1;
   }
 
-  .dropdown-content-classa {
+  .dropdown-content-class a {
    color: black;
    text-decoration: none;
    display: block;
+   /* display: flex;
+   flex-direction: row; */
   }
 
   .dropdown-content-class a:hover {
